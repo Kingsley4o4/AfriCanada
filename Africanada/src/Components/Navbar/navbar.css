@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.Navbar-Wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  align-items: center;
+  color: white;
+}
+
+.Logo-Container {
+  width: 400px;
+  padding-left: 70px;
+  padding-top: 10px;
+
+}
+
+.ContactUS-sesction {
+  padding-right: 70px;
+  display: flex;
+  align-items: center;
+ gap: 10px;
+}
+
+.contactBtn {
+  font-size: 17px;
+  background-color: #c70007;
+  color: white;
+  width: 114px;
+  height: 36px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 20px;
+}

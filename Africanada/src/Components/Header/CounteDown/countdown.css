@@ -1,0 +1,21 @@
+.countdown{
+ margin-top:20px;
+ display: flex;
+ gap: 20px;
+}
+
+.timer-Box,.div
+{
+    width: 90px;
+    height: 70px;
+    border-radius:12px;
+    padding: 16px;
+    background-color: #FFFFFF1A;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+
+
+   
+}

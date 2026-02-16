@@ -1,0 +1,74 @@
+.Header-ImageWrapper {
+  width: 100%;
+  position: relative;
+  color: white;
+}
+.img-head {
+  width: 100%;
+  object-fit: cover;
+}
+
+.intro {
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 30rem;
+}
+
+.intro-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -70px;
+}
+.Btns-Container {
+  margin-top: 20px;
+}
+
+.btn-1,
+.btn-2,
+.Btn-3 {
+  font-size: 17px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  width: 231px;
+  height: 48px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.btn-1 {
+  background-color: #c70007;
+  color: white;
+}
+
+.btn-2 {
+  margin-inline: 10px;
+}
+.Btn-3 {
+  background-color: #ffd82a;
+  margin-inline: 10px;
+}
+
+.TotalUser-Number{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+}
+
+
+.totalUserTest{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #C70007;
+  flex-direction: column;
+  font-size: 24px;
+}

@@ -1,0 +1,112 @@
+import React from "react";
+import "./header.css";
+import Img from "../Header/Img/Header(1).png";
+import { Calendar, MapPin, ArrowUpRight } from "lucide-react";
+import Countdown from "./CounteDown/CountDown";
+
+function Header() {
+  return (
+    <div className="Header">
+      <div className="Header-Containter">
+        <div className="Header-ImageWrapper">
+          <img className="img-head" src={Img} alt="" />
+
+          <div className="intro">
+            <div className="intro-content">
+              <Calendar color="yellow" />
+              <span style={{ paddingInlineStart: "6px", paddingRight: "20px" }}>
+                {" "}
+                June 10-12, 2026
+              </span>
+              | <MapPin color="yellow" style={{ paddingLeft: "20px" }} />
+              <span style={{ paddingInlineStart: "6px" }}>
+                Edomonton, Alberta, Canada
+              </span>
+            </div>
+
+            <h1 style={{ fontSize: "100px" }}>AfriCanada</h1>
+            <h1 style={{ marginTop: "-1.1em", fontSize: "100px" }}>
+              Expo 2026
+            </h1>
+            <h2 style={{ color: "#FF333A", marginTop: "-55px" }}>
+              Premier Global Platform for Shared Prosperity{" "}
+            </h2>
+            <span style={{ marginTop: "-10px" }}>
+              Connecting African Excellence with Global Opportunities Through
+              World-Class Exhibitions
+            </span>
+            <div className="Btns-Container">
+              <button className="btn-1">
+                Register as Exhibitor <ArrowUpRight size={16} color="white" />
+              </button>
+              <button className="btn-2">
+                Register as Visitor <ArrowUpRight size={16} />
+              </button>
+              <button className="Btn-3">
+                Become a Sponsor <ArrowUpRight size={16} />
+              </button>
+            </div>
+            <Countdown targetDate="2026-05-31T00:00:00" />
+          </div>
+        </div>
+        <div className="TotalUser-Number">
+          <div className="totalUserTest">
+            <h1>500+</h1>
+            <span
+              style={{
+                color: "gray",
+                marginTop: "-30px",
+                fontSize: "15px",
+                fontWeight: "600",
+              }}
+            >
+              Exhibitors Expected
+            </span>
+          </div>
+          <div className="totalUserTest">
+            <h1>40+</h1>
+            <span
+              style={{
+                color: "gray",
+                marginTop: "-30px",
+                fontSize: "15px",
+                fontWeight: "600",
+              }}
+            >
+              Countries
+            </span>
+          </div>
+          <div className="totalUserTest">
+            <h1>10,000+</h1>
+            <span
+              style={{
+                color: "gray",
+                marginTop: "-30px",
+                fontSize: "15px",
+                fontWeight: "600",
+              }}
+            >
+              Trade Visitor
+            </span>
+          </div>
+
+          <div className="totalUserTest">
+            <h1>$100M+</h1>
+            <span
+              style={{
+                color: "gray",
+                marginTop: "-30px",
+                fontSize: "15px",
+                fontWeight: "600",
+              }}
+            >
+              Business Deals
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Header;
