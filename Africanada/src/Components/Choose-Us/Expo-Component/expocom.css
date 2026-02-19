@@ -1,6 +1,115 @@
-.ExpoCom{
-    height: 200px;
-        width: 200px;
-        border: 2px solid red;
-    
+.ExpoCom {
+  margin-top: 90px;
+  background-color: #f3f5f74d;
+  height: 750px;
+}
+
+.ExpoCom-Wrapper {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Table-Container {
+  margin-top: 23px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+/* .tablist{
+   
+   
+  
+} */
+.icos-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  justify-content: center;
+  padding: 10px;
+  color: gray;
+  font-weight: 500;
+}
+
+.spanbtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  /* justify-content: center; */
+}
+
+.spanbtn-active {
+  color: white;
+  background-color: #e2473c;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.tabDisplay {
+  display: flex;
+  justify-content: space-around;
+
+  height: 266px;
+}
+
+.tabDisplay-Wrapper {
+  padding-inline: 30px;
+  display: flex;
+  margin-top: 20px;
+  border-radius: 10px;
+  gap: 50px;
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.firstTabDisplayCard {
+  width: 559px;
+  display: flex;
+  flex-direction: column;
+}
+
+.secondTabDisplayCard {
+  width: 559px;
+}
+
+.headIcon {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.build {
+  margin-inline-end: 10px;
+  background-color: #ffe5e6;
+  padding: 18px;
+  border-radius: 6px;
+  color: #c70007;
+  font-size: 21px;
+}
+
+.btnContainerExpo button {
+  margin-top: 20px;
+  font-size: 14px;
+  color: white;
+  background-color: #c70007;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+gap: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.btnContainerExpo button:hover{
+   background-color: #b7050b;
 }
