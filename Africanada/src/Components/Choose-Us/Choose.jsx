@@ -1,5 +1,5 @@
 import React from "react";
-import "./Choose.css";
+import "./choose.css";
 import { Shield, TrendingUp, Globe, Layers } from "lucide-react";
 
 const Choose = () => {
