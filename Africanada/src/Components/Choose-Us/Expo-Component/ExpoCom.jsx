@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ExpoCom.css";
+import "./expoCom.css";
 import {
   Building2,
   MicVocal,
