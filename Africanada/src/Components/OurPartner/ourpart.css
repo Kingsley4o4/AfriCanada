@@ -1,0 +1,97 @@
+.OurPartnerWrapper h4 {
+  color: #e2473c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.OurPartner {
+  margin-top: 70px;
+  background-color: #F3F5F74D;
+}
+
+.SelectionOneContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.SelectionOne {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.SelectionOne h5 {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #65758b;
+  color: #65758b;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: white;
+}
+
+.SelectionOne h5:hover {
+  box-shadow: 0 5px 15px rgba(101, 85, 139, 0.3);
+  border-color: #e2473c;
+  color: #e2473c;
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+.SelectionTwoContainer,
+.SelectionThirdContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.SelectionTwo {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.SelectionTwo h5 {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #65758b;
+  color: #65758b;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: white;
+}
+
+.SelectionTwo h5:hover {
+  box-shadow: 0 8px 20px rgba(101, 85, 139, 0.25);
+  border-color: #e2473c;
+  color: #e2473c;
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+.SelectionThrid h5 {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #65758b;
+  color: #65758b;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: white;
+}
+
+.SelectionThrid h5:hover {
+  box-shadow: 0 6px 18px rgba(101, 85, 139, 0.2);
+  border-color: #e2473c;
+  color: #e2473c;
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+.SelectionThrid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Partner CTA Section */

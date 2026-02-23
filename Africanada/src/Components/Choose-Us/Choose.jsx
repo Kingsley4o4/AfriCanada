@@ -77,50 +77,72 @@ const Choose = () => {
       </div>
 
       <div className="wrapper-numContainer">
-          
         <div className="wrapper-numbers">
           {/* hfhfh */}
-          
-           <span style={{ fontSize:"14px", fontWeight: "700", textAlign: "center", color:"gray", marginTop:"-20px"}}>5-YEAR VISION</span>
-          <div className="numBoxes-wrapper">
-              
-         
-            <div className="numBoxes">
 
+          <span
+            style={{
+              fontSize: "14px",
+              fontWeight: "700",
+              textAlign: "center",
+              color: "gray",
+              marginTop: "-20px",
+            }}
+          >
+            5-YEAR VISION
+          </span>
+          <div className="numBoxes-wrapper">
+            <div className="numBoxes">
               <h1>$500M+ </h1>
-              <span  style={{
-                color: "gray",
-                marginTop: "-22px",
-                fontSize: "15px",
-                fontWeight: "600",
-              }}>Target Trade Value by Year 5</span>
+              <span
+                style={{
+                  color: "gray",
+                  marginTop: "-22px",
+                  fontSize: "15px",
+                  fontWeight: "600",
+                }}
+              >
+                Target Trade Value by Year 5
+              </span>
             </div>
             <div className="numBoxes">
               <h1>5,000+</h1>
-              <span  style={{
-                color: "gray",
-                marginTop: "-22px",
-                fontSize: "15px",
-                fontWeight: "600",
-              }}>Exhibitors Globally</span>
+              <span
+                style={{
+                  color: "gray",
+                  marginTop: "-22px",
+                  fontSize: "15px",
+                  fontWeight: "600",
+                }}
+              >
+                Exhibitors Globally
+              </span>
             </div>
             <div className="numBoxes">
               <h1>200,000+</h1>
-              <span  style={{
-                color: "gray",
-                marginTop: "-22px",
-                fontSize: "15px",
-                fontWeight: "600",
-              }}>Trade Visitors Expected</span>
+              <span
+                style={{
+                  color: "gray",
+                  marginTop: "-22px",
+                  fontSize: "15px",
+                  fontWeight: "600",
+                }}
+              >
+                Trade Visitors Expected
+              </span>
             </div>
             <div className="numBoxes">
               <h1>100+</h1>
-              <span  style={{
-                color: "gray",
-                marginTop: "-22px",
-                fontSize: "15px",
-                fontWeight: "600",
-              }}>Countries Represented</span>
+              <span
+                style={{
+                  color: "gray",
+                  marginTop: "-22px",
+                  fontSize: "15px",
+                  fontWeight: "600",
+                }}
+              >
+                Countries Represented
+              </span>
             </div>
           </div>
         </div>

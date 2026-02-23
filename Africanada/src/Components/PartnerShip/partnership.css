@@ -1,0 +1,212 @@
+.PartnerShip {
+  background-color: #111827;
+  padding: 60px 24px 80px;
+  color: white;
+}
+
+.PartnerShipIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.PartnerShipIntro h4 {
+  color: #f59e0b;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.PartnerShipIntro h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 20px;
+}
+
+.PartnerShipIntroDesc {
+  color: #d1d5db;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.partnerShipContentContainer {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 60px auto 0;
+}
+
+.partnerShipContentCardOne {
+  flex: 1;
+  max-width: 520px;
+}
+
+.partnerShipContentCardOne h4 {
+  color: #f59e0b;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.designIntro {
+  color: #d1d5db;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.numberedList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.numberedItem {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.numberBadge {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background-color: #f59e0b;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.numberedTitle {
+  font-weight: 700;
+  color: white;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.numberedDesc {
+  color: #d1d5db;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.partnerShipContentCardTwo {
+  flex: 1;
+  max-width: 520px;
+}
+
+.partnerShipContentCardTwo h4 {
+  color: #f59e0b;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.BoxesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Boxes {
+  background-color: #1f2937;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.Boxes h6 {
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 8px;
+}
+
+.Boxes p {
+  color: #d1d5db;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.fullBoxContainer {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 30px;
+}
+
+.fullBox {
+  display: flex;
+  justify-content: center;
+
+  background-color: #1f2937;
+  border-radius: 12px;
+  padding: 30px 14px;
+  width: 1090px;
+}
+
+.fullBox span {
+  font-size: 17px;
+  text-align: center;
+  color: #d1d5db;
+}
+
+.outtroCard span {
+  font-size: 14px;
+  text-align: center;
+  color: #d1d5db;
+}
+
+.OutroContainer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.lastContainer {
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.lastContainer span {
+  background-color: #1f2937;
+  border-radius: 30px;
+  color: #d1d5db;
+  padding: 10px 10px;
+}
+
+@media (max-width: 1024px) {
+  .partnerShipContentContainer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 48px;
+  }
+
+  .partnerShipContentCardOne,
+  .partnerShipContentCardTwo {
+    max-width: none;
+  }
+
+  .PartnerShipIntro h2 {
+    font-size: 28px;
+  }
+}

@@ -8,7 +8,6 @@ import {
   Palette,
   TrendingUp,
   PartyPopper,
-  UserRound,
   ArrowRight,
   CircleCheckBig,
 } from "lucide-react";
@@ -21,8 +20,8 @@ const ExpoCom = () => {
   const Zones = "Cultural Experience Zones";
   const Investment = "Investment Fourms";
   const Networking = "Networking Events";
+
   const [activeDisplay, setActiveDisplay] = useState(null);
-  console.log(activeDisplay);
 
   const ExhibitionCardkDisplay = (
     <>
@@ -47,16 +46,7 @@ const ExpoCom = () => {
         </div>
       </div>
       <div className="secondTabDisplayCard">
-        <div
-          style={{
-            paddingTop: "30px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "15px",
-            fontSize: "17px",
-            color: "#0F1729",
-          }}
-        >
+        <div className="CircleCheckContaner">
           <span>
             {" "}
             <CircleCheckBig color="green" size={18} /> Made in Africa Pavilion -
@@ -112,7 +102,7 @@ const ExpoCom = () => {
       <div className="secondTabDisplayCard">
         <div
           style={{
-            paddingTop: "30px",
+            paddingTop: "42px",
             display: "flex",
             flexDirection: "column",
             gap: "15px",
@@ -174,7 +164,7 @@ const ExpoCom = () => {
       <div className="secondTabDisplayCard">
         <div
           style={{
-            paddingTop: "30px",
+            paddingTop: "42px",
             display: "flex",
             flexDirection: "column",
             gap: "15px",
@@ -212,7 +202,7 @@ const ExpoCom = () => {
     </>
   );
   const spotLightCardDisplay = (
-     <>
+    <>
       <div className="firstTabDisplayCard">
         <div className="headIcon">
           {" "}
@@ -236,7 +226,7 @@ const ExpoCom = () => {
       <div className="secondTabDisplayCard">
         <div
           style={{
-            paddingTop: "30px",
+            paddingTop: "42px",
             display: "flex",
             flexDirection: "column",
             gap: "15px",
@@ -274,7 +264,7 @@ const ExpoCom = () => {
     </>
   );
   const CulturalCardDisplay = (
-     <>
+    <>
       <div className="firstTabDisplayCard">
         <div className="headIcon">
           {" "}
@@ -298,7 +288,7 @@ const ExpoCom = () => {
       <div className="secondTabDisplayCard">
         <div
           style={{
-            paddingTop: "30px",
+            paddingTop: "42px",
             display: "flex",
             flexDirection: "column",
             gap: "15px",
@@ -336,7 +326,7 @@ const ExpoCom = () => {
     </>
   );
   const inverstmentCardDisplay = (
-      <>
+    <>
       <div className="firstTabDisplayCard">
         <div className="headIcon">
           {" "}
@@ -360,7 +350,7 @@ const ExpoCom = () => {
       <div className="secondTabDisplayCard">
         <div
           style={{
-            paddingTop: "30px",
+            paddingTop: "42px",
             display: "flex",
             flexDirection: "column",
             gap: "15px",
@@ -398,7 +388,7 @@ const ExpoCom = () => {
     </>
   );
   const marketingCardDisplay = (
-      <>
+    <>
       <div className="firstTabDisplayCard">
         <div className="headIcon">
           {" "}
@@ -422,7 +412,7 @@ const ExpoCom = () => {
       <div className="secondTabDisplayCard">
         <div
           style={{
-            paddingTop: "30px",
+            paddingTop: "42px",
             display: "flex",
             flexDirection: "column",
             gap: "15px",
@@ -463,9 +453,10 @@ const ExpoCom = () => {
   return (
     <div className="ExpoCom">
       <div className="ExpoCom-Wrapper">
-        <h4 style={{ color: "#c70007" }}>EXPO COMPONENET</h4>
+        <h4 style={{ color: "#c70007", fontSize: "14px" }}>EXPO COMPONENT</h4>
         <h2
-          style={{ fontSize: "38px", marginTop: "-20px", textAlign: "center" }}
+          className="expoComHeading"
+          style={{ marginTop: "-20px", textAlign: "center" }}
         >
           A Complete Business Ecosystem
         </h2>
@@ -497,6 +488,7 @@ const ExpoCom = () => {
               }}
               className={`spanbtn ${activeDisplay === 1 && "spanbtn-active"}`}
             >
+              {" "}
               <MicVocal size={19} /> {Conference}
             </span>
             <span
@@ -505,6 +497,7 @@ const ExpoCom = () => {
               }}
               className={`spanbtn ${activeDisplay === 2 && "spanbtn-active"}`}
             >
+              {" "}
               <UsersRound size={19} />
               {Matchmaking}
             </span>
@@ -548,11 +541,9 @@ const ExpoCom = () => {
           </div>
         </div>
       </div>
+
       <div className="tabDisplay">
         <div className="tabDisplay-Wrapper">
-          {/* {UserClickDisplay ? UserClickDisplay : clickDisplay} */}
-          {/* {UserClickDisplay} */}
-          {/* {clickDisplayCon || clickDisplay || displayB2b} */}
           {activeDisplay === null ? ExhibitionCardkDisplay : null}
           {activeDisplay === 0 && ExhibitionCardkDisplay}
           {activeDisplay === 1 && ConferenceCardDisplay}
@@ -561,6 +552,229 @@ const ExpoCom = () => {
           {activeDisplay === 4 && CulturalCardDisplay}
           {activeDisplay === 5 && inverstmentCardDisplay}
           {activeDisplay === 6 && marketingCardDisplay}
+        </div>
+      </div>
+      {/* WHO SHOULD ATTEND SECTION */}
+      <div className="Attend-Program">
+        <div className="ExpoCom-Wrapper">
+          <h4 style={{ color: "#c70007", fontSize: "14px" }}>
+            WHO SHOULD ATTEND
+          </h4>
+          <h2
+            className="expoComHeading"
+            style={{ marginTop: "-20px", textAlign: "center" }}
+          >
+            A Complete Business Ecosystem
+          </h2>
+        </div>
+        <div className="attendedCard">
+          <div className="firstAttenedCard">
+            <div className="head">
+              <div className="content-container">
+                <span className="attendHeaderTitle">
+                  <Building2 size={25} /> Exhibitors
+                </span>
+                <p className="attendHeaderSubtitle">
+                  Showcase your products to the world
+                </p>
+              </div>
+            </div>
+
+            <div className="whiteBox">
+              <h3>Who Should Exhibit:</h3>
+              <div className="CircleCheckContanerWhite1">
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Canadian Manufacturers & Producers
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  African Exporters
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Cooperatives & Associations
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Artisans & Craftspeople
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Service Providers
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Government Trade Agencies
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Technology Companies
+                </span>
+
+                <span style={{ fontSize: "20px", fontWeight: "700" }}>
+                  Exhibitor Benefits:
+                </span>
+
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="#E2473C" size={18} /> Direct access to
+                  qualified buyers
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="#E2473C" size={18} /> Lead generation
+                  and sales opportunities
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="#E2473C" size={18} />
+                  Brand visibility and media exposure
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="#E2473C" size={18} /> Networking with
+                  industry leaders
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="#E2473C" size={18} /> Government
+                  delegation meetings
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="#E2473C" size={18} /> Cultural showcase
+                  opportunities
+                </span>
+              </div>
+              <div className="RegisterBtn">
+                <button>
+                  Register as Exhibitor{" "}
+                  <ArrowRight style={{ paddingTop: "4px" }} size={17} />{" "}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/*  */}
+
+          <div className="secondAttenedCard">
+            <div className="secondHead">
+              <div className="content-container">
+                <span className="attendHeaderTitle">
+                  <UsersRound size={25} /> Visitors
+                </span>
+                <p className="attendHeaderSubtitle">
+                  Discover opportunities and build partnerships
+                </p>
+              </div>
+            </div>
+
+            <div className="whiteBox">
+              <h3>Who Should Visit:</h3>
+              <div className="CircleCheckContanerWhite">
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  International Buyers & Importers
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Distributors & Retailers
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Investors & Investment Funds
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Government Officials & Diplomats
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Corporate Procurement
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Trade Development Agenciess
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Media & Journalists
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Researchers & Academics
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="green" size={18} />
+                  Diaspora Entrepreneurs
+                </span>
+
+                <span style={{ fontSize: "20px", fontWeight: "700" }}>
+                  Visitor Benefits:
+                </span>
+
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="#FBBD23" size={18} />
+                  Free trade visitor registration
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="#FBBD23" size={18} />
+                  Access to 500+ exhibitors under one roof
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="#FBBD23" size={18} />
+                  Pre-arranged B2B meetings
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="#FBBD23" size={18} />
+                  Conference sessions and workshops
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="#FBBD23" size={18} />
+                  Networking with decision-makers
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="#FBBD23" size={18} />
+                  Market intelligence and insights
+                </span>
+                <span className="circleicon">
+                  {" "}
+                  <CircleCheckBig color="#FBBD23" size={18} />
+                  Cultural experiences
+                </span>
+              </div>
+
+              <div className="RegisterBtnWhite">
+                <button>
+                  Register as Exhibitor{" "}
+                  <ArrowRight style={{ paddingTop: "4px" }} size={17} />{" "}
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
