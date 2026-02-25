@@ -34,7 +34,7 @@ const Choose = () => {
             <Globe />
           </div>
           <span
-            style={{ fontSize: "14px", fontWeight: "bold", paddingTop: "20px" }}
+            style={{ fontSize: "18px", fontWeight: "600", paddingTop: "20px" }}
           >
             Globe Reach
           </span>
@@ -49,7 +49,7 @@ const Choose = () => {
             <Layers />{" "}
           </div>
           <span
-            style={{ fontSize: "14px", fontWeight: "bold", paddingTop: "20px" }}
+            style={{ fontSize: "18px", fontWeight: "600", paddingTop: "20px" }}
           >
             Complete Ecosystem
           </span>
@@ -64,7 +64,7 @@ const Choose = () => {
             <TrendingUp />
           </div>
           <span
-            style={{ fontSize: "14px", fontWeight: "bold", paddingTop: "20px" }}
+            style={{ fontSize: "18px", fontWeight: "600", paddingTop: "20px" }}
           >
             Proven Result
           </span>

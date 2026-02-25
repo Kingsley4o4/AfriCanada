@@ -1,9 +1,3 @@
-/* body {
-  margin: 0;
-}
-* {
-  box-sizing: border-box;
-} */
 .Expo {
   background-color: #f3f5f780;
 }
@@ -14,69 +8,142 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding-inline: 16px;
+  text-align: center;
 }
+
+.Expo-Container h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: -20px;
+}
+
+/* ===========================
+   MAIN LAYOUT
+=========================== */
 
 .Main-container {
-  /* margin-top: 40px; */
-
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  margin: 0;
+  gap: 24px;
+  padding: 0 30px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 40px;
 }
+
+/* ===========================
+   RED & BLACK CONTAINERS
+=========================== */
+
+.red-container,
+.black-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 300px;
+  max-width: 520px;
+  width: 100%;
+}
+
+/* ===========================
+   RED BOX
+=========================== */
 
 .red-box {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   background-color: #c70007;
-  width: 450px;
-  height: 192px;
+  width: 100%;
+  min-height: 160px;
   color: white;
-
-  padding-inline: 20px;
-}
-.white-box h5 {
-  font-size: 14px;
-  font-weight: 400;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.white-box2 span {
-  font-size: 14px;
-  font-weight: 400;
+.red-box p,
+.red-box h3,
+.red-box span {
+  word-break: break-word;
 }
+
+/* ===========================
+   WHITE BOX
+=========================== */
+
 .white-box {
-  width: 448px;
-
-  padding-inline: 20px;
+  width: 100%;
+  padding: 16px 20px;
   color: gray;
+  box-sizing: border-box;
   box-shadow:
     rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
-.red-container,
-.black-container {
+.white-box h5 {
+  font-size: 14px;
+  font-weight: 400;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 10px;
+  flex-wrap: nowrap;
+  word-break: break-word;
+  line-height: 1.5;
 }
+
+.white-box h5 .icon-span {
+  flex-shrink: 0;
+}
+
+/* ===========================
+   BLACK BOX
+=========================== */
 
 .black-box {
   background-color: #0f1729;
-  width: 450px;
-  height: 192px;
+  width: 100%;
+  min-height: 160px;
   color: white;
-  padding-inline: 20px;
-  margin-top: 50px;
+  padding: 20px;
+  box-sizing: border-box;
   border-radius: 20px;
 }
 
 .black-box span {
   font-size: 15px;
+  word-break: break-word;
 }
+
+/* ===========================
+   WHITE BOX 2
+=========================== */
+
+.white-box2 {
+  margin-top: 24px;
+  border-radius: 10px;
+  padding: 16px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.white-box2 span {
+  font-size: 14px;
+  font-weight: 400;
+  word-break: break-word;
+}
+
+/* ===========================
+   SHARED
+=========================== */
 
 .icon-span {
   margin-inline-end: 10px;
@@ -84,50 +151,9 @@
   padding: 10px;
   border-radius: 6px;
   color: #c70007;
+  flex-shrink: 0;
 }
 
-.white-box2 {
-  margin-top: 30px;
-  border-radius: 10px;
-  padding-inline-start: 20px;
-
-  width: 470px;
-  height: 226px;
-  box-shadow:
-    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-}
-
-.ExhibitorBtn {
-  height: 40px;
-  width: 230px;
-  border-radius: 7px;
-  outline: none;
-  border: none;
-  background-color: #c70007;
-  color: white;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.sponserBtn {
-  height: 40px;
-  width: 230px;
-  border-radius: 10px;
-  outline: none;
-  border: none;
-
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-}
-.BtnContainer {
-  margin-top: 20px;
-  justify-content: space-between;
-  display: flex;
-  gap: 20px;
-}
 .discountMSg {
   color: #fbbd23;
   border: 1px solid #fbbe2350;
@@ -137,135 +163,137 @@
   padding: 7px;
   border-radius: 4px;
   margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  word-break: break-word;
 }
 
-@media (max-width: 441px) {
-  .red-box {
-    width: 90%;
-    height: 200px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  .black-box {
-    width: 90%;
-    height: 200px;
-    border-radius: 10px;
-  }
+/* ===========================
+   BUTTONS
+=========================== */
+
+.BtnContainer {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-@media (max-width: 513px) {
+.ExhibitorBtn {
+  flex: 1;
+  height: 40px;
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  background-color: #c70007;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.ExhibitorBtn:hover {
+  background-color: #b7050b;
+}
+
+.sponserBtn {
+  flex: 1;
+  height: 40px;
+  border-radius: 10px;
+  outline: none;
+  border: 1.5px solid #333;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.sponserBtn:hover {
+  background-color: #f0f0f0;
+}
+
+/* ===========================
+   TABLET — max 1024px
+=========================== */
+
+@media (max-width: 1024px) {
+  .Main-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+  }
+
   .red-container,
   .black-container {
     width: 100%;
-    padding: 0 10px;
+    max-width: 100%;
+    min-width: unset;
+    flex: unset;
   }
+}
 
-  .red-box,
-  .black-box,
-  .white-box,
-  .white-box2 {
-    width: 95%;
-    max-width: 95%;
-  }
+/* ===========================
+   MOBILE — max 640px
+=========================== */
 
+@media (max-width: 640px) {
   .Expo-Container h2 {
-    font-size: 23px !important;
+    font-size: 1.8rem !important;
     font-weight: 800 !important;
+  }
+
+  .Main-container {
+    padding: 0 12px;
+    gap: 16px;
+  }
+
+  .red-box {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    min-height: unset;
+  }
+
+  .black-box {
+    border-radius: 12px;
+    min-height: unset;
+  }
+
+  .white-box h5 {
+    font-size: 13px;
   }
 
   .BtnContainer {
     flex-direction: column;
-    width: 100%;
     gap: 10px;
   }
 
   .ExhibitorBtn,
   .sponserBtn {
     width: 100%;
+    flex: unset;
   }
 }
 
-@media (max-width: 1021px) {
+/* ===========================
+   SMALL MOBILE — max 400px
+=========================== */
+
+@media (max-width: 400px) {
   .Main-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 20px;
+    padding: 0 8px;
   }
 
-  .red-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 20px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-  }
-
-  .black-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 10px;
-    align-items: center;
-    margin-top: 30px;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .BtnContainer {
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 480px;
-    margin: 20px auto 0;
-  }
-
-  .ExhibitorBtn,
-  .sponserBtn {
-    flex: 1 1 calc(50% - 10px);
-    min-width: 200px;
-  }
-
-  .red-box {
-    width: 90.6%;
-    height: 146px;
-  }
-  .black-box {
-    width: 90%;
-    height: 190px;
-  }
-
-  .white-box {
-    width: 90%;
-  }
-
-  .white-box2 {
-    width: 90%;
+  .Expo-Container {
+    padding-inline: 10px;
   }
 }
-
-/* @media (min-width: 641px) and (max-width: 996px) {
-  .Main-Container {
-    flex-wrap: wrap;
-  }
-
-  .red-container {
-    display: flex;
-     flex-wrap: wrap;
-  }
-
-  .red-box {
-   
-   
-    width: 100%;
-    max-width: 700px;
-    height: 192px;
-  }
-
-  .white-box {
-    width: 698px;
-  }
-}
-
-@media (min-width: 1025px) {
-} */
