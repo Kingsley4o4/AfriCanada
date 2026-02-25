@@ -2,35 +2,84 @@ body {
   margin: 0;
   padding: 0;
 }
-li {
-  list-style: none;
-  cursor: pointer;
+
+
+/* ===========================
+   NAVBAR BASE
+=========================== */
+
+.NavBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: black;
 }
 
 .Navbar-Wrapper {
   display: flex;
   justify-content: space-between;
-  background-color: black;
   align-items: center;
+  background-color: black;
+  color: white;
+  padding-inline: 40px;
+  height: 70px;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.Logo-Container {
+  width: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.Logo-Container img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* ===========================
+   DESKTOP NAV LINKS
+=========================== */
+
+.Nav-Links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Nav-Links li {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
   color: white;
 }
 
-.Logo-Container {
-  width: 400px;
-  padding-left: 70px;
-  padding-top: 10px;
-
+.Nav-Links li:hover {
+  color: #c70007;
+  transition: color 200ms ease;
 }
 
+/* ===========================
+   DESKTOP RIGHT SECTION
+=========================== */
+
 .ContactUS-sesction {
-  padding-right: 70px;
   display: flex;
   align-items: center;
- gap: 10px;
+  gap: 10px;
+  color: white;
 }
 
 .contactBtn {
-  font-size: 17px;
+  font-size: 15px;
   background-color: #c70007;
   color: white;
   width: 114px;
@@ -39,5 +88,131 @@ li {
   border: none;
   outline: none;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 10px;
+  transition: background-color 200ms ease;
+}
+
+.contactBtn:hover {
+  background-color: #b7050b;
+}
+
+/* ===========================
+   HAMBURGER — hidden on desktop
+=========================== */
+
+.Hamburger {
+  display: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* ===========================
+   MOBILE MENU
+=========================== */
+
+.Mobile-Menu {
+  display: none;
+  flex-direction: column;
+  background-color: #111;
+  padding: 20px 30px;
+  overflow: hidden;
+}
+
+.Mobile-Menu.open {
+  display: flex;
+}
+
+.Mobile-Menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.Mobile-Menu ul li {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #222;
+}
+
+.Mobile-Menu ul li:hover {
+  color: #c70007;
+  transition: color 200ms ease;
+}
+
+.Mobile-Bottom {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+/* ===========================
+   TABLET — max 1024px
+=========================== */
+
+@media (max-width: 1024px) {
+  .Navbar-Wrapper {
+    padding-inline: 24px;
+  }
+
+  .Nav-Links {
+    gap: 18px;
+  }
+
+  .Nav-Links li {
+    font-size: 14px;
+  }
+}
+
+/* ===========================
+   MOBILE — max 768px
+=========================== */
+
+@media (max-width: 768px) {
+  .Nav-Links {
+    display: none;
+  }
+
+  .ContactUS-sesction {
+    display: none;
+  }
+
+  .Hamburger {
+    display: flex;
+    align-items: center;
+  }
+
+  .Navbar-Wrapper {
+    padding-inline: 16px;
+    height: 60px;
+  }
+
+  .Logo-Container {
+    width: 50px;
+  }
+}
+
+/* ===========================
+   SMALL MOBILE — max 480px
+=========================== */
+
+@media (max-width: 480px) {
+  .Logo-Container {
+    width: 45px;
+  }
+
+  .Mobile-Menu {
+    padding: 16px 20px;
+  }
+
+  .Mobile-Menu ul li {
+    font-size: 15px;
+  }
 }

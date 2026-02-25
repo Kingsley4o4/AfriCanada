@@ -12,446 +12,167 @@ import {
   CircleCheckBig,
 } from "lucide-react";
 
+// Moved outside component to avoid recreation on every render
+const tabs = [
+  { icon: <Building2 size={19} />, label: "Exhibition Halls" },
+  { icon: <MicVocal size={19} />, label: "Conference & Trade Dialogues" },
+  { icon: <UsersRound size={19} />, label: "B2B Matchmaking Lounge" },
+  { icon: <Rocket size={19} />, label: "StartUp Spotlight" },
+  { icon: <Palette size={19} />, label: "Cultural Experience Zones" },
+  { icon: <TrendingUp size={19} />, label: "Investment Forums" },
+  { icon: <PartyPopper size={19} />, label: "Networking Events" },
+];
+
+const tabCards = [
+  {
+    icon: <Building2 className="build" />,
+    title: "Exhibition Halls",
+    description:
+      "World-class exhibition spaces featuring country pavilions, sector zones, and innovation alley.",
+    buttonLabel: "Learn More About Exhibiting",
+    items: [
+      "Made in Africa Pavilion - Country pavilions representing African nations",
+      "Made in Canada/Host Country Showcase",
+      "Sector Zones: Fashion, food, beauty, technology, AI, manufacturing",
+      "Innovation Alley: Startups and emerging businesses",
+      "Demo Stages: Live product demonstrations throughout the day",
+    ],
+  },
+  {
+    icon: <MicVocal className="build" />,
+    title: "Conference & Trade Dialogues",
+    description:
+      "World-class exhibition spaces featuring country pavilions, sector zones, and innovation alley.",
+    buttonLabel: "Learn More About Conference",
+    items: [
+      "Made in Africa Pavilion - Country pavilions representing African nations",
+      "Made in Canada/Host Country Showcase",
+      "Sector Zones: Fashion, food, beauty, technology, AI, manufacturing",
+      "Innovation Alley: Startups and emerging businesses",
+      "Demo Stages: Live product demonstrations throughout the day",
+    ],
+  },
+  {
+    icon: <UsersRound className="build" />,
+    title: "B2B Matchmaking Lounge",
+    description:
+      "World-class exhibition spaces featuring country pavilions, sector zones, and innovation alley.",
+    buttonLabel: "Learn More About B2B Matchmaking",
+    items: [
+      "Made in Africa Pavilion - Country pavilions representing African nations",
+      "Made in Canada/Host Country Showcase",
+      "Sector Zones: Fashion, food, beauty, technology, AI, manufacturing",
+      "Innovation Alley: Startups and emerging businesses",
+      "Demo Stages: Live product demonstrations throughout the day",
+    ],
+  },
+  {
+    icon: <Rocket className="build" />,
+    title: "StartUp Spotlight",
+    description:
+      "World-class exhibition spaces featuring country pavilions, sector zones, and innovation alley.",
+    buttonLabel: "Learn More About StartUp Spotlight",
+    items: [
+      "Made in Africa Pavilion - Country pavilions representing African nations",
+      "Made in Canada/Host Country Showcase",
+      "Sector Zones: Fashion, food, beauty, technology, AI, manufacturing",
+      "Innovation Alley: Startups and emerging businesses",
+      "Demo Stages: Live product demonstrations throughout the day",
+    ],
+  },
+  {
+    icon: <Palette className="build" />,
+    title: "Cultural Experience Zones",
+    description:
+      "World-class exhibition spaces featuring country pavilions, sector zones, and innovation alley.",
+    buttonLabel: "Learn More About Cultural",
+    items: [
+      "Made in Africa Pavilion - Country pavilions representing African nations",
+      "Made in Canada/Host Country Showcase",
+      "Sector Zones: Fashion, food, beauty, technology, AI, manufacturing",
+      "Innovation Alley: Startups and emerging businesses",
+      "Demo Stages: Live product demonstrations throughout the day",
+    ],
+  },
+  {
+    icon: <TrendingUp className="build" />,
+    title: "Investment Forums",
+    description:
+      "World-class exhibition spaces featuring country pavilions, sector zones, and innovation alley.",
+    buttonLabel: "Learn More About Investment Forums",
+    items: [
+      "Made in Africa Pavilion - Country pavilions representing African nations",
+      "Made in Canada/Host Country Showcase",
+      "Sector Zones: Fashion, food, beauty, technology, AI, manufacturing",
+      "Innovation Alley: Startups and emerging businesses",
+      "Demo Stages: Live product demonstrations throughout the day",
+    ],
+  },
+  {
+    icon: <PartyPopper className="build" />,
+    title: "Networking Events",
+    description:
+      "World-class exhibition spaces featuring country pavilions, sector zones, and innovation alley.",
+    buttonLabel: "Learn More About Networking Events",
+    items: [
+      "Made in Africa Pavilion - Country pavilions representing African nations",
+      "Made in Canada/Host Country Showcase",
+      "Sector Zones: Fashion, food, beauty, technology, AI, manufacturing",
+      "Innovation Alley: Startups and emerging businesses",
+      "Demo Stages: Live product demonstrations throughout the day",
+    ],
+  },
+];
+
+const exhibitorWho = [
+  "Canadian Manufacturers & Producers",
+  "African Exporters",
+  "Cooperatives & Associations",
+  "Artisans & Craftspeople",
+  "Service Providers",
+  "Government Trade Agencies",
+  "Technology Companies",
+];
+
+const exhibitorBenefits = [
+  "Direct access to qualified buyers",
+  "Lead generation and sales opportunities",
+  "Brand visibility and media exposure",
+  "Networking with industry leaders",
+  "Government delegation meetings",
+  "Cultural showcase opportunities",
+];
+
+const visitorWho = [
+  "International Buyers & Importers",
+  "Distributors & Retailers",
+  "Investors & Investment Funds",
+  "Government Officials & Diplomats",
+  "Corporate Procurement",
+  "Trade Development Agencies",
+  "Media & Journalists",
+  "Researchers & Academics",
+  "Diaspora Entrepreneurs",
+];
+
+const visitorBenefits = [
+  "Free trade visitor registration",
+  "Access to 500+ exhibitors under one roof",
+  "Pre-arranged B2B meetings",
+  "Conference sessions and workshops",
+  "Networking with decision-makers",
+  "Market intelligence and insights",
+  "Cultural experiences",
+];
+
 const ExpoCom = () => {
-  const Exhibition = "Exhibition Halls";
-  const Conference = "Conference & Trade Dialogues";
-  const Matchmaking = "B2B Matchmaking Lounge";
-  const Spotlight = "StartUp Spotlight";
-  const Zones = "Cultural Experience Zones";
-  const Investment = "Investment Fourms";
-  const Networking = "Networking Events";
+  const [activeDisplay, setActiveDisplay] = useState(0);
 
-  const [activeDisplay, setActiveDisplay] = useState(null);
-
-  const ExhibitionCardkDisplay = (
-    <>
-      <div className="firstTabDisplayCard">
-        <div className="headIcon">
-          {" "}
-          <h1 style={{ display: "flex", alignItems: "center" }}>
-            {" "}
-            <Building2 className="build" /> {Exhibition}{" "}
-          </h1>{" "}
-        </div>
-
-        <span style={{ color: "gray", fontSize: "17px" }}>
-          World-class exhibition spaces featuring country pavilions, sector
-          zones, <br /> and <br /> innovation alley.
-        </span>
-
-        <div className="btnContainerExpo">
-          <button>
-            Learn More About Exhibiting <ArrowRight size={17} />
-          </button>
-        </div>
-      </div>
-      <div className="secondTabDisplayCard">
-        <div className="CircleCheckContaner">
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Africa Pavilion -
-            Country pavilions representing African nations
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Canada/Host
-            Country Showcase
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Sector Zones: Fashion,
-            food, beauty, technology, AI, manufacturing
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Innovation Alley:
-            Startups and emerging businesses
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Demo Stages: Live product
-            demonstrations throughout the day
-          </span>
-        </div>
-      </div>
-    </>
-  );
-
-  const ConferenceCardDisplay = (
-    <>
-      <div className="firstTabDisplayCard">
-        <div className="headIcon">
-          {" "}
-          <h1 style={{ display: "flex", alignItems: "center" }}>
-            {" "}
-            <MicVocal className="build" /> {Conference}{" "}
-          </h1>{" "}
-        </div>
-
-        <span style={{ color: "gray", fontSize: "17px" }}>
-          World-class exhibition spaces featuring country pavilions, sector
-          zones, <br /> and <br /> innovation alley.
-        </span>
-
-        <div className="btnContainerExpo">
-          <button>
-            Learn More About Conference <ArrowRight size={17} />
-          </button>
-        </div>
-      </div>
-      <div className="secondTabDisplayCard">
-        <div
-          style={{
-            paddingTop: "42px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "15px",
-            fontSize: "17px",
-            color: "#0F1729",
-          }}
-        >
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Africa Pavilion -
-            Country pavilions representing African nations
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Canada/Host
-            Country Showcase
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Sector Zones: Fashion,
-            food, beauty, technology, AI, manufacturing
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Innovation Alley:
-            Startups and emerging businesses
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Demo Stages: Live product
-            demonstrations throughout the day
-          </span>
-        </div>
-      </div>
-    </>
-  );
-  const B2bMatchmakingCardDisplay = (
-    <>
-      <div className="firstTabDisplayCard">
-        <div className="headIcon">
-          {" "}
-          <h1 style={{ display: "flex", alignItems: "center" }}>
-            {" "}
-            <UsersRound className="build" /> {Matchmaking}{" "}
-          </h1>{" "}
-        </div>
-
-        <span style={{ color: "gray", fontSize: "17px" }}>
-          World-class exhibition spaces featuring country pavilions, sector
-          zones, <br /> and <br /> innovation alley.
-        </span>
-
-        <div className="btnContainerExpo">
-          <button>
-            Learn More About B2B Matchmaking <ArrowRight size={17} />
-          </button>
-        </div>
-      </div>
-      <div className="secondTabDisplayCard">
-        <div
-          style={{
-            paddingTop: "42px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "15px",
-            fontSize: "17px",
-            color: "#0F1729",
-          }}
-        >
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Africa Pavilion -
-            Country pavilions representing African nations
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Canada/Host
-            Country Showcase
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Sector Zones: Fashion,
-            food, beauty, technology, AI, manufacturing
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Innovation Alley:
-            Startups and emerging businesses
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Demo Stages: Live product
-            demonstrations throughout the day
-          </span>
-        </div>
-      </div>
-    </>
-  );
-  const spotLightCardDisplay = (
-    <>
-      <div className="firstTabDisplayCard">
-        <div className="headIcon">
-          {" "}
-          <h1 style={{ display: "flex", alignItems: "center" }}>
-            {" "}
-            <Rocket className="build" /> {Spotlight}{" "}
-          </h1>{" "}
-        </div>
-
-        <span style={{ color: "gray", fontSize: "17px" }}>
-          World-class exhibition spaces featuring country pavilions, sector
-          zones, <br /> and <br /> innovation alley.
-        </span>
-
-        <div className="btnContainerExpo">
-          <button>
-            Learn More About {Spotlight} <ArrowRight size={17} />
-          </button>
-        </div>
-      </div>
-      <div className="secondTabDisplayCard">
-        <div
-          style={{
-            paddingTop: "42px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "15px",
-            fontSize: "17px",
-            color: "#0F1729",
-          }}
-        >
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Africa Pavilion -
-            Country pavilions representing African nations
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Canada/Host
-            Country Showcase
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Sector Zones: Fashion,
-            food, beauty, technology, AI, manufacturing
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Innovation Alley:
-            Startups and emerging businesses
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Demo Stages: Live product
-            demonstrations throughout the day
-          </span>
-        </div>
-      </div>
-    </>
-  );
-  const CulturalCardDisplay = (
-    <>
-      <div className="firstTabDisplayCard">
-        <div className="headIcon">
-          {" "}
-          <h1 style={{ display: "flex", alignItems: "center" }}>
-            {" "}
-            <Palette className="build" /> {Zones}{" "}
-          </h1>{" "}
-        </div>
-
-        <span style={{ color: "gray", fontSize: "17px" }}>
-          World-class exhibition spaces featuring country pavilions, sector
-          zones, <br /> and <br /> innovation alley.
-        </span>
-
-        <div className="btnContainerExpo">
-          <button>
-            Learn More About Cultural <ArrowRight size={17} />
-          </button>
-        </div>
-      </div>
-      <div className="secondTabDisplayCard">
-        <div
-          style={{
-            paddingTop: "42px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "15px",
-            fontSize: "17px",
-            color: "#0F1729",
-          }}
-        >
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Africa Pavilion -
-            Country pavilions representing African nations
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Canada/Host
-            Country Showcase
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Sector Zones: Fashion,
-            food, beauty, technology, AI, manufacturing
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Innovation Alley:
-            Startups and emerging businesses
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Demo Stages: Live product
-            demonstrations throughout the day
-          </span>
-        </div>
-      </div>
-    </>
-  );
-  const inverstmentCardDisplay = (
-    <>
-      <div className="firstTabDisplayCard">
-        <div className="headIcon">
-          {" "}
-          <h1 style={{ display: "flex", alignItems: "center" }}>
-            {" "}
-            <TrendingUp className="build" /> {Investment}{" "}
-          </h1>{" "}
-        </div>
-
-        <span style={{ color: "gray", fontSize: "17px" }}>
-          World-class exhibition spaces featuring country pavilions, sector
-          zones, <br /> and <br /> innovation alley.
-        </span>
-
-        <div className="btnContainerExpo">
-          <button>
-            Learn More About {Investment} <ArrowRight size={17} />
-          </button>
-        </div>
-      </div>
-      <div className="secondTabDisplayCard">
-        <div
-          style={{
-            paddingTop: "42px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "15px",
-            fontSize: "17px",
-            color: "#0F1729",
-          }}
-        >
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Africa Pavilion -
-            Country pavilions representing African nations
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Canada/Host
-            Country Showcase
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Sector Zones: Fashion,
-            food, beauty, technology, AI, manufacturing
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Innovation Alley:
-            Startups and emerging businesses
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Demo Stages: Live product
-            demonstrations throughout the day
-          </span>
-        </div>
-      </div>
-    </>
-  );
-  const marketingCardDisplay = (
-    <>
-      <div className="firstTabDisplayCard">
-        <div className="headIcon">
-          {" "}
-          <h1 style={{ display: "flex", alignItems: "center" }}>
-            {" "}
-            <PartyPopper className="build" /> {Networking}{" "}
-          </h1>{" "}
-        </div>
-
-        <span style={{ color: "gray", fontSize: "17px" }}>
-          World-class exhibition spaces featuring country pavilions, sector
-          zones, <br /> and <br /> innovation alley.
-        </span>
-
-        <div className="btnContainerExpo">
-          <button>
-            Learn More About {Networking} <ArrowRight size={17} />
-          </button>
-        </div>
-      </div>
-      <div className="secondTabDisplayCard">
-        <div
-          style={{
-            paddingTop: "42px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "15px",
-            fontSize: "17px",
-            color: "#0F1729",
-          }}
-        >
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Africa Pavilion -
-            Country pavilions representing African nations
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Made in Canada/Host
-            Country Showcase
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Sector Zones: Fashion,
-            food, beauty, technology, AI, manufacturing
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Innovation Alley:
-            Startups and emerging businesses
-          </span>
-          <span>
-            {" "}
-            <CircleCheckBig color="green" size={18} /> Demo Stages: Live product
-            demonstrations throughout the day
-          </span>
-        </div>
-      </div>
-    </>
-  );
+  const activeCard = tabCards[activeDisplay];
 
   return (
     <div className="ExpoCom">
+      {/* HEADER */}
       <div className="ExpoCom-Wrapper">
         <h4 style={{ color: "#c70007", fontSize: "14px" }}>EXPO COMPONENT</h4>
         <h2
@@ -471,90 +192,56 @@ const ExpoCom = () => {
           Everything you need for successful deal-making under one roof
         </span>
       </div>
+
+      {/* TABS */}
       <div className="Table-Container">
         <div className="tablist">
           <div className="icos-wrapper">
-            <span
-              onClick={() => {
-                setActiveDisplay(0);
-              }}
-              className={`spanbtn ${(activeDisplay === null && "spanbtn-active") || (activeDisplay === 0 && "spanbtn-active")}`}
-            >
-              <Building2 size={19} /> {Exhibition}{" "}
-            </span>
-            <span
-              onClick={() => {
-                setActiveDisplay(1);
-              }}
-              className={`spanbtn ${activeDisplay === 1 && "spanbtn-active"}`}
-            >
-              {" "}
-              <MicVocal size={19} /> {Conference}
-            </span>
-            <span
-              onClick={() => {
-                setActiveDisplay(2);
-              }}
-              className={`spanbtn ${activeDisplay === 2 && "spanbtn-active"}`}
-            >
-              {" "}
-              <UsersRound size={19} />
-              {Matchmaking}
-            </span>
-            <span
-              onClick={() => {
-                setActiveDisplay(3);
-              }}
-              className={`spanbtn ${activeDisplay === 3 && "spanbtn-active"}`}
-            >
-              <Rocket size={19} /> {Spotlight}
-            </span>
-            <span
-              onClick={() => {
-                setActiveDisplay(4);
-              }}
-              className={`spanbtn ${activeDisplay === 4 && "spanbtn-active"}`}
-            >
-              <Palette size={19} />
-              {Zones}
-            </span>{" "}
-            <br />
-          </div>
-          <div className="icos-wrapper">
-            <span
-              onClick={() => {
-                setActiveDisplay(5);
-              }}
-              className={`spanbtn ${activeDisplay === 5 && "spanbtn-active"}`}
-            >
-              <TrendingUp size={19} /> {Investment}
-            </span>
-            <span
-              onClick={() => {
-                setActiveDisplay(6);
-              }}
-              className={`spanbtn ${activeDisplay === 6 && "spanbtn-active"}`}
-            >
-              <PartyPopper size={19} />
-              {Networking}
-            </span>
+            {tabs.map((tab, index) => (
+              <span
+                key={index}
+                onClick={() => setActiveDisplay(index)}
+                className={`spanbtn ${activeDisplay === index ? "spanbtn-active" : ""}`}
+              >
+                {tab.icon} {tab.label}
+              </span>
+            ))}
           </div>
         </div>
       </div>
 
+      {/* TAB CARD DISPLAY */}
       <div className="tabDisplay">
         <div className="tabDisplay-Wrapper">
-          {activeDisplay === null ? ExhibitionCardkDisplay : null}
-          {activeDisplay === 0 && ExhibitionCardkDisplay}
-          {activeDisplay === 1 && ConferenceCardDisplay}
-          {activeDisplay === 2 && B2bMatchmakingCardDisplay}
-          {activeDisplay === 3 && spotLightCardDisplay}
-          {activeDisplay === 4 && CulturalCardDisplay}
-          {activeDisplay === 5 && inverstmentCardDisplay}
-          {activeDisplay === 6 && marketingCardDisplay}
+          <div className="firstTabDisplayCard">
+            <div className="headIcon">
+              <h1 style={{ display: "flex", alignItems: "center" }}>
+                {activeCard.icon} {activeCard.title}
+              </h1>
+            </div>
+            <span style={{ color: "gray", fontSize: "17px" }}>
+              {activeCard.description}
+            </span>
+            <div className="btnContainerExpo">
+              <button>
+                {activeCard.buttonLabel} <ArrowRight size={17} />
+              </button>
+            </div>
+          </div>
+
+          <div className="secondTabDisplayCard">
+            <div className="CircleCheckContaner">
+              {activeCard.items.map((item, index) => (
+                <span key={index}>
+                  <CircleCheckBig color="green" size={18} /> {item}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-      {/* WHO SHOULD ATTEND SECTION */}
+
+      {/* WHO SHOULD ATTEND */}
       <div className="Attend-Program">
         <div className="ExpoCom-Wrapper">
           <h4 style={{ color: "#c70007", fontSize: "14px" }}>
@@ -567,7 +254,9 @@ const ExpoCom = () => {
             A Complete Business Ecosystem
           </h2>
         </div>
+
         <div className="attendedCard">
+          {/* EXHIBITORS */}
           <div className="firstAttenedCard">
             <div className="head">
               <div className="content-container">
@@ -579,92 +268,33 @@ const ExpoCom = () => {
                 </p>
               </div>
             </div>
-
             <div className="whiteBox">
               <h3>Who Should Exhibit:</h3>
               <div className="CircleCheckContanerWhite1">
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Canadian Manufacturers & Producers
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  African Exporters
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Cooperatives & Associations
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Artisans & Craftspeople
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Service Providers
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Government Trade Agencies
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Technology Companies
-                </span>
-
+                {exhibitorWho.map((item, i) => (
+                  <span key={i} className="circleicon">
+                    <CircleCheckBig color="green" size={18} /> {item}
+                  </span>
+                ))}
                 <span style={{ fontSize: "20px", fontWeight: "700" }}>
                   Exhibitor Benefits:
                 </span>
-
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="#E2473C" size={18} /> Direct access to
-                  qualified buyers
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="#E2473C" size={18} /> Lead generation
-                  and sales opportunities
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="#E2473C" size={18} />
-                  Brand visibility and media exposure
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="#E2473C" size={18} /> Networking with
-                  industry leaders
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="#E2473C" size={18} /> Government
-                  delegation meetings
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="#E2473C" size={18} /> Cultural showcase
-                  opportunities
-                </span>
+                {exhibitorBenefits.map((item, i) => (
+                  <span key={i} className="circleicon">
+                    <CircleCheckBig color="#E2473C" size={18} /> {item}
+                  </span>
+                ))}
               </div>
               <div className="RegisterBtn">
                 <button>
                   Register as Exhibitor{" "}
-                  <ArrowRight style={{ paddingTop: "4px" }} size={17} />{" "}
+                  <ArrowRight style={{ paddingTop: "4px" }} size={17} />
                 </button>
               </div>
             </div>
           </div>
 
-          {/*  */}
-
+          {/* VISITORS */}
           <div className="secondAttenedCard">
             <div className="secondHead">
               <div className="content-container">
@@ -676,101 +306,27 @@ const ExpoCom = () => {
                 </p>
               </div>
             </div>
-
             <div className="whiteBox">
               <h3>Who Should Visit:</h3>
               <div className="CircleCheckContanerWhite">
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  International Buyers & Importers
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Distributors & Retailers
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Investors & Investment Funds
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Government Officials & Diplomats
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Corporate Procurement
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Trade Development Agenciess
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Media & Journalists
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Researchers & Academics
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="green" size={18} />
-                  Diaspora Entrepreneurs
-                </span>
-
+                {visitorWho.map((item, i) => (
+                  <span key={i} className="circleicon">
+                    <CircleCheckBig color="green" size={18} /> {item}
+                  </span>
+                ))}
                 <span style={{ fontSize: "20px", fontWeight: "700" }}>
                   Visitor Benefits:
                 </span>
-
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="#FBBD23" size={18} />
-                  Free trade visitor registration
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="#FBBD23" size={18} />
-                  Access to 500+ exhibitors under one roof
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="#FBBD23" size={18} />
-                  Pre-arranged B2B meetings
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="#FBBD23" size={18} />
-                  Conference sessions and workshops
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="#FBBD23" size={18} />
-                  Networking with decision-makers
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="#FBBD23" size={18} />
-                  Market intelligence and insights
-                </span>
-                <span className="circleicon">
-                  {" "}
-                  <CircleCheckBig color="#FBBD23" size={18} />
-                  Cultural experiences
-                </span>
+                {visitorBenefits.map((item, i) => (
+                  <span key={i} className="circleicon">
+                    <CircleCheckBig color="#FBBD23" size={18} /> {item}
+                  </span>
+                ))}
               </div>
-
               <div className="RegisterBtnWhite">
                 <button>
-                  Register as Exhibitor{" "}
-                  <ArrowRight style={{ paddingTop: "4px" }} size={17} />{" "}
+                  Register as Visitor{" "}
+                  <ArrowRight style={{ paddingTop: "4px" }} size={17} />
                 </button>
               </div>
             </div>

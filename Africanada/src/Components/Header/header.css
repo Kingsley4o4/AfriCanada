@@ -2,14 +2,38 @@
   width: 100%;
   position: relative;
   color: white;
+  display: flex;
+
+  overflow: hidden;
 }
+
 .img-head {
   width: 100%;
+
   object-fit: cover;
+  object-position: center;
+
+  /* width: 100vw;
+  
+  object-fit: cover; */
+  /* width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; */
 }
 
 .intro {
+  position: absolute;
   inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  transform: translateY(-19%);
+
+  /* inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,15 +41,22 @@
   text-align: center;
   color: white;
   position: absolute;
-  bottom: 30rem;
+  bottom: 30rem; */
 }
 
 .intro-content {
+  /* display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: -70px;
+  /* border: 2px solid springgreen; */
   animation: fadeInUp 1s ease-out;
+  margin-bottom: -6rem;
 }
 
 .intro h1 {
@@ -120,6 +151,9 @@
   transform: scale(1.05);
 }
 
+.textInto{
+  font-size: 20px;
+}
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -141,4 +175,112 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.introText {
+  font-size: 120px;
+}
+
+.stMArginTop {
+  margin-top: -90px;
+  font-size: 32px;
+  color: #ff333a;
+}
+
+/* ========== MOBILE (default first approach) ========== */
+
+/* phones */
+
+@media (max-width: 440px) {
+  .btn-1,
+.btn-2,
+.Btn-3{
+ height: 40px;
+ font-size: 14px;
+}
+}
+
+@media (max-width: 640px) {
+  
+  .intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 10px;
+    flex-direction: column;
+  }
+  .textInto {
+    font-size:15px;
+  }
+  .introText {
+    font-size: 40px;
+
+    margin-top: 10rem;
+  }
+
+  .Header-ImageWrapper {
+    height: 55rem;
+  }
+
+  .stMArginTop {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  /* * {
+    background-color: green;
+  } */
+
+  .Btns-Container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+  }
+
+  .TotalUser-Number {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .totalUserTest h1 {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* ========== TABLET ========== */
+@media (min-width: 641px) and (max-width: 842px) {
+  .Btn-3 {
+    margin-top: 10px;
+  }
+
+  .Header-ImageWrapper {
+    height: 57rem;
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+
+  .stMArginTop{
+    margin-top: -40px;
+  }
+  .Header-ImageWrapper {
+    /* height: 30rem; */
+  }
+  .introText {
+    margin-top:13rem;
+    font-size: 60px;
+  }
+}
+
+/* ========== DESKTOP ========== */
+@media (min-width: 1025px) {
+  /* .container {
+    padding: 40px;
+  } */
 }

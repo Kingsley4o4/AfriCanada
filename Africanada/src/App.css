@@ -12,6 +12,16 @@ body{
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+   
+   
 }
+
+html{
+   scroll-behavior: smooth;
+   
+}
+
+
+
 
 

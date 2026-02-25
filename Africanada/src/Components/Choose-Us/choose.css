@@ -10,11 +10,13 @@
 .cards-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   gap: 21px;
   margin-top: 20px;
-  height: 300px;
+  margin-inline: 20px;
+  /* flex-wrap: wrap; */
 }
+
 .card1,
 .card2,
 .card3,
@@ -22,11 +24,8 @@
   text-align: start;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  padding: 18px;
   width: 270px;
-  height: 250px;
-  width: 270px;
-  height: 250px;
   border-radius: 20px;
   box-shadow:
     rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
@@ -44,43 +43,131 @@
   background-color: #ffe5e6;
   padding: 15px;
   border-radius: 6px;
-  color: #C70007;
+  color: #c70007;
 }
+.numBoxes-wrapper {
+  display: flex;
 
+  flex-wrap: wrap;
+}
 .wrapper-numbers {
   display: flex;
   justify-content: center;
- margin: 0 auto;
+  margin: 0 auto;
   flex-direction: column;
-   width: 1216px;
- height: 228px;
+  width: 1216px;
+  height: 228px;
   border-radius: 10px;
   background-color: #f3f5f780;
-   /* width: 1216px; */
-   
+  flex-wrap: wrap;
 
   /* border-radius: 12px ; */
 }
 
 .wrapper-numContainer {
+  flex-wrap: wrap;
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   margin-top: 40px;
+
   /* height: 300px; */
 }
 
 .numBoxes-wrapper {
   display: flex;
   justify-content: space-around;
- 
+
   border-radius: 10px;
 }
-.numBoxes{
-   display: flex;
+.numBoxes {
+  display: flex;
   justify-content: center;
   align-items: center;
-  color: #C70007;
+  color: #c70007;
   flex-direction: column;
+}
 
+/* @media (max-width: 441px) {
+   .cards-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+   
+    background-color: red;
+   }
+     .card1,
+.card2,
+.card3,
+.card4{
+
+ 
+
+}
+} */
+/* Tablet: 2-column grid */
+@media (max-width: 1021px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-inline: 10px;
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4 {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .wrapper-numbers {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .numBoxes-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Mobile: 1-column grid */
+@media (max-width: 655px) {
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin-inline: 10px;
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4 {
+    width: 90%;
+    margin: auto;
+  }
+
+  .wrapper-numbers {
+    width: 95%;
+    height: auto;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  .numBoxes-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .numBoxes {
+    width: 100%;
+    text-align: center;
+  }
+
+  .Choose-wrapper h2 {
+    font-size: 23px !important;
+    font-weight: 800 !important;
+  }
 }

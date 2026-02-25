@@ -19,19 +19,20 @@ function Header() {
                 June 10-12, 2026
               </span>
               | <MapPin color="yellow" style={{ paddingLeft: "20px" }} />
-              <span style={{ paddingInlineStart: "6px" }}>
+              <span style={{ paddingInlineStart: "6px"}}>
                 Edomonton, Alberta, Canada
               </span>
             </div>
 
-            <h1 style={{ fontSize: "100px" }}>AfriCanada</h1>
-            <h1 style={{ marginTop: "-1.1em", fontSize: "100px" }}>
+            <h1 className="introText">AfriCanada</h1>
+            <h1 className="introText" style={{ marginTop: "-.9em",  }}>
+              
               Expo 2026
             </h1>
-            <h2 style={{ color: "#FF333A", marginTop: "-55px" }}>
+            <h2 className="stMArginTop">
               Premier Global Platform for Shared Prosperity{" "}
             </h2>
-            <span style={{ marginTop: "-10px" }}>
+            <span className="textInto" style={{ marginTop: "-10px" }}>
               Connecting African Excellence with Global Opportunities Through
               World-Class Exhibitions
             </span>

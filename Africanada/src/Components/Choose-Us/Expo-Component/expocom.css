@@ -1,3 +1,7 @@
+/* ===========================
+   BASE STYLES
+=========================== */
+
 .ExpoCom {
   margin-top: 50px;
   background-color: #f3f5f74d;
@@ -5,31 +9,41 @@
 
 .ExpoCom-Wrapper {
   padding-top: 40px;
+  padding-inline: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .expoComHeading {
   font-size: 38px;
+  margin-top: -20px;
+  text-align: center;
 }
+
+/* ===========================
+   TABS
+=========================== */
 
 .Table-Container {
   margin-top: 23px;
-
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  padding-inline: 20px;
 }
 
-/* .tablist{
-   
-   
-  
-} */
+.tablist {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .icos-wrapper {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 13px;
   justify-content: center;
   padding: 10px;
@@ -42,6 +56,9 @@
   align-items: center;
   gap: 6px;
   cursor: pointer;
+  padding: 10px;
+  border-radius: 15px;
+  white-space: nowrap;
 }
 
 .spanbtn-active {
@@ -49,14 +66,11 @@
   background-color: #e2473c;
   padding: 10px;
   border-radius: 15px;
-  /* transition: all ease-in-out 400ms; */
-  /* animation: bounceIn 500ms ease forwards; */
-  /* animation: glitch 400ms ease forwards; */
-  /* animation: glitch 400ms steps(2) forwards; */
   animation: ripple 350ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
   transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: scale(0.95);
 }
+
 @keyframes ripple {
   0% {
     transform: scale(0.95);
@@ -72,15 +86,21 @@
   }
 }
 
+/* ===========================
+   TAB CARD DISPLAY
+=========================== */
+
 .tabDisplay {
   display: flex;
-  justify-content: space-around;
-
-  height: 266px;
+  justify-content: center;
+  padding-inline: 30px;
+  margin-bottom: 30px;
 }
 
 .tabDisplay-Wrapper {
-  padding-inline: 30px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 24px 30px;
   display: flex;
   margin-top: 20px;
   border-radius: 10px;
@@ -91,19 +111,18 @@
 }
 
 .firstTabDisplayCard {
-  width: 559px;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 .secondTabDisplayCard {
-  width: 559px;
+  flex: 1;
 }
 
 .headIcon {
   display: flex;
   align-items: center;
-  align-content: center;
 }
 
 .build {
@@ -112,7 +131,6 @@
   padding: 18px;
   border-radius: 6px;
   color: #c70007;
-  font-size: 21px;
 }
 
 .btnContainerExpo button {
@@ -122,13 +140,12 @@
   background-color: #c70007;
   outline: none;
   border: none;
-  padding: 10px;
+  padding: 10px 16px;
   border-radius: 10px;
   cursor: pointer;
   display: flex;
   gap: 10px;
   align-items: center;
-  text-align: center;
   justify-content: center;
 }
 
@@ -136,7 +153,18 @@
   background-color: #b7050b;
 }
 
-/* WHO SHOOULD ATTEND SECTION  STYLING*/
+.CircleCheckContaner {
+  display: flex;
+  margin-top: 40px;
+  gap: 15px;
+  font-size: 17px;
+  color: #0f1729;
+  flex-direction: column;
+}
+
+/* ===========================
+   WHO SHOULD ATTEND
+=========================== */
 
 .Attend-Program {
   width: 100%;
@@ -146,47 +174,44 @@
 
 .attendedCard {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 40px;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  padding-inline: 30px;
+  /* flex-wrap: wrap; */
+}
+
+.firstAttenedCard,
+.secondAttenedCard {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  max-width: 900px;
 }
 
 .head {
   color: white;
-  width: 500px;
+  width: 100%;
   background-color: #b7050b;
-  height: 160px;
+  min-height: 160px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-}
-
-.whiteBox {
-  padding-top: 4px;
-
-  height: 732px;
-
-  width: 459px;
-  padding-inline: 20px;
-  box-shadow:
-    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 .secondHead {
   background-color: #0f1729;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  height: 160px;
-  width: 500px;
+  min-height: 160px;
+  width: 100%;
   color: white;
 }
 
 .content-container {
   padding-inline-start: 20px;
   padding-top: 40px;
+  padding-bottom: 16px;
 }
 
 .attendHeaderTitle {
@@ -198,37 +223,30 @@
 }
 
 .attendHeaderSubtitle {
-  font-size: 20px;
+  font-size: 18px;
   margin: 6px 0 0;
 }
 
-.CircleCheckContaner {
-  display: flex;
-  margin-top: 40px;
-  gap: 15px;
-  font-size: 17px;
-  color: #0f1729;
-  flex-direction: column;
-}
-.CircleCheckContanerWhite1 {
-  display: flex;
-  justify-content: center;
-
-  gap: 15px;
-  font-size: 17px;
-  color: #0f1729;
-  flex-direction: column;
+.whiteBox {
+  padding: 16px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
+.CircleCheckContanerWhite1,
 .CircleCheckContanerWhite {
   display: flex;
-  justify-content: center;
-
-  gap: 10px;
+  gap: 12px;
   font-size: 17px;
   color: #0f1729;
   flex-direction: column;
 }
+
 .circleicon {
   display: flex;
   align-items: center;
@@ -238,11 +256,11 @@
 
 .RegisterBtn button {
   margin-top: 25px;
-  width: 452px;
+  width: 100%;
   background-color: #c70007;
   outline: none;
   border: none;
-  padding: 10px;
+  padding: 12px;
   border-radius: 10px;
   cursor: pointer;
   color: white;
@@ -251,14 +269,19 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
+  box-sizing: border-box;
+}
+
+.RegisterBtn button:hover {
+  background-color: #b7050b;
 }
 
 .RegisterBtnWhite button {
   margin-top: 25px;
-  width: 452px;
-
-  border: 1px solid black;
-  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+  border: 1.5px solid black;
+  padding: 12px;
   border-radius: 10px;
   cursor: pointer;
   color: black;
@@ -267,56 +290,54 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
+  box-sizing: border-box;
 }
 
-@media (max-width: 1024px) {
-  .Table-Container {
-    justify-content: center;
-    padding: 0 16px;
-  }
+.RegisterBtnWhite button:hover {
+  background-color: #f0f0f0;
+}
 
+/* ===========================
+   TABLET — max 1024px
+=========================== */
+
+@media (max-width: 1024px) {
   .tabDisplay {
-    height: auto;
-    padding: 0 16px;
+    padding-inline: 20px;
   }
 
   .tabDisplay-Wrapper {
-    width: 100%;
-    max-width: 980px;
-    gap: 24px;
-  }
-
-  .firstTabDisplayCard,
-  .secondTabDisplayCard {
-    width: 100%;
+    gap: 30px;
   }
 
   .attendedCard {
-    gap: 22px;
-    padding: 0 16px;
+    gap: 24px;
+    padding-inline: 20px;
+    flex-wrap: wrap;
   }
 }
 
+/* ===========================
+   TABLET PORTRAIT — max 768px
+=========================== */
+
 @media (max-width: 768px) {
+  .expoComHeading {
+    font-size: 28px;
+  }
+
   .ExpoCom-Wrapper {
     padding-inline: 16px;
   }
 
-  .icos-wrapper {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .spanbtn-active {
-    padding: 8px;
-    border-radius: 12px;
+  .tabDisplay {
+    padding-inline: 16px;
   }
 
   .tabDisplay-Wrapper {
     flex-direction: column;
-    padding-inline: 16px;
-    gap: 18px;
+    padding: 16px;
+    gap: 20px;
   }
 
   .firstTabDisplayCard,
@@ -326,69 +347,118 @@
 
   .btnContainerExpo button {
     width: 100%;
+    justify-content: center;
+  }
+
+  .CircleCheckContaner {
+    margin-top: 10px;
   }
 
   .attendedCard {
     flex-direction: column;
     align-items: center;
+    padding-inline: 16px;
+  }
+
+  .firstAttenedCard,
+  .secondAttenedCard {
+    width: 100%;
+    max-width: 100%;
   }
 
   .head,
   .secondHead {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
+    min-height: 130px;
   }
 
-  .whiteBox {
-    width: 100%;
-    max-width: 459px;
-    height: auto;
-    box-sizing: border-box;
+  .attendHeaderTitle {
+    font-size: 18px;
+  }
+
+  .attendHeaderSubtitle {
+    font-size: 14px;
   }
 
   .content-container {
     padding-top: 24px;
-    padding-inline-start: 0;
-    text-align: left;
-  }
-
-  .attendHeaderTitle {
-    /* justify-content: flex-start; */
-    /* text-align: left; */
-    padding-inline:20px;
-    font-size: 18px;
-    gap: 8px;
-  }
-
-  .attendHeaderSubtitle {
-     padding-inline:20px;
-    font-size: 14px;
-    margin-top: 4px;
-  }
-
-  .RegisterBtn button,
-  .RegisterBtnWhite button {
-    width: 100%;
-  }
-  .CircleCheckContaner {
-    margin-top: 0px;
-    padding: 6px;
+    padding-inline-start: 16px;
   }
 }
 
+/* ===========================
+   MOBILE — max 480px
+=========================== */
+
 @media (max-width: 480px) {
   .expoComHeading {
-    font-size: 26px;
+    font-size: 22px;
+    font-weight: 800;
+  }
+
+  .spanbtn {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .spanbtn-active {
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .tabDisplay {
+    padding-inline: 10px;
+  }
+
+  .tabDisplay-Wrapper {
+    padding: 12px;
+    gap: 16px;
+  }
+
+  .build {
+    padding: 12px;
+  }
+
+  .firstTabDisplayCard h1 {
+    font-size: 18px;
   }
 
   .CircleCheckContaner,
   .CircleCheckContanerWhite1,
   .CircleCheckContanerWhite {
-    font-size: 16px;
+    font-size: 15px;
+    gap: 10px;
   }
 
   .circleicon {
+    font-size: 15px;
+    gap: 10px;
+  }
+
+  .attendedCard {
+    padding-inline: 10px;
+    gap: 16px;
+  }
+
+  .whiteBox {
+    padding: 12px 14px;
+  }
+
+  .head,
+  .secondHead {
+    min-height: 110px;
+  }
+
+  .attendHeaderTitle {
     font-size: 16px;
+  }
+
+  .attendHeaderSubtitle {
+    font-size: 13px;
+  }
+
+  .RegisterBtn button,
+  .RegisterBtnWhite button {
+    font-size: 14px;
+    padding: 10px;
   }
 }

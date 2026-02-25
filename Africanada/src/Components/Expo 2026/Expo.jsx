@@ -16,11 +16,11 @@ function Expo() {
   return (
     <div className="Expo">
       <div className="Expo-Container">
-        <h5 style={{ color: "#E2473C" }}>THE INAUGURAL EDITION </h5>
-        <h2 style={{ marginTop: "-20px", fontSize: "38px" }}>
+        <h5 style={{ color: "#E2473C",fontSize:"16px"  }}>THE INAUGURAL EDITION </h5>
+        <h2 style={{ marginTop: "-20px", fontSize: "3rem", textAlign:"center" }}>
           AfriCanada Expo 2026
         </h2>
-        <i style={{ color: "gray", fontWeight: "600", marginTop: "-30px" }}>
+        <i className="italic" style={{ color: "gray", fontWeight: "600", marginTop: "-19px",textAlign:"center" }}>
           "We aren't just hosting a trade show; we are building a trade
           corridor."
         </i>
@@ -99,11 +99,11 @@ function Expo() {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                gap: "3px",
+                gap: "7px",
                 justifyContent: "center",
               }}
             >
-              <h5>Expected Outcomes</h5>
+              <span style={{fontSize:"20px", fontWeight:"400" , paddingTop:"30px" } }>Expected Outcomes</span>
               <span>
                 {" "}
                 <CircleCheckBig
@@ -143,7 +143,7 @@ function Expo() {
               </span>
             </div>
           </div>
-          <div className="white-bo">
+          {/* <div className="white-bo"> */}
             <div className="white-box2">
               <div
                 style={{
@@ -219,7 +219,7 @@ function Expo() {
                 Become a Sponsor <ArrowUpRight size={16} />
               </button>
             </div>
-          </div>
+          {/* </div> */}
            <div className="discountMSg">
             <span>
               🎉 Early Bird Discount: Book by March 15, 2026 and Save 20% on

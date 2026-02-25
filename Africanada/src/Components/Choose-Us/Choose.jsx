@@ -6,9 +6,9 @@ const Choose = () => {
   return (
     <div className="Choose">
       <div className="Choose-wrapper">
-        <h4 style={{ color: "#c70007" }}>WHY CHOOSE US</h4>
+        <h4 style={{ color: "#c70007", fontSize:"16px" }}>WHY CHOOSE US</h4>
         <h2
-          style={{ fontSize: "38px", marginTop: "-20px", textAlign: "center" }}
+          style={{ fontSize: "3rem", marginTop: "-10px", textAlign: "center", lineHeight:"45px" }}
         >
           The World's Premier Platform for Canada/Africa <br /> Commerce
         </h2>
@@ -19,11 +19,11 @@ const Choose = () => {
             <Shield />
           </div>
           <span
-            style={{ fontSize: "14px", fontWeight: "bold", paddingTop: "20px" }}
+            style={{ fontSize: "18px", fontWeight:"600",   paddingTop: "20px" }}
           >
             Full Access{" "}
           </span>
-          <span style={{ color: "gray" }}>
+          <span style={{ color: "gray", fontSize:"14px" }}>
             Direct access to authentic <br />
             Canadian/African products, raw materials, and innovations from
             Edmonton, Canada, and 54 African countries.
@@ -38,10 +38,10 @@ const Choose = () => {
           >
             Globe Reach
           </span>
-          <span style={{ color: "gray" }}>
+          <span style={{ color: "gray" ,fontSize:"14px" }}>
             Permanently based in Edmonton, Canada's gateway to Africa trade.
             Supported by Edmonton governments for annual consistency and deep
-            bilateral focus.
+            bilateral  focus.
           </span>
         </div>
         <div className="card3">
@@ -53,7 +53,7 @@ const Choose = () => {
           >
             Complete Ecosystem
           </span>
-          <span style={{ color: "gray" }}>
+          <span style={{ color: "gray" ,fontSize:"14px" }}>
             Our platform offers comprehensive business opportunities with
             conference, networking, matchmaking, cultural experiences, and
             investment forums.
@@ -68,7 +68,7 @@ const Choose = () => {
           >
             Proven Result
           </span>
-          <span style={{ color: "gray" }}>
+          <span style={{ color: "gray",fontSize:"14px" }}>
             Following our model of global expansion and success, delivering
             measurable ROI through actual deals, partnerships, and long-term
             relationships.
