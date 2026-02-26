@@ -27,9 +27,7 @@
   padding: 18px;
   width: 270px;
   border-radius: 20px;
-  box-shadow:
-    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .card-icon {
@@ -50,6 +48,19 @@
 
   flex-wrap: wrap;
 }
+.vision{
+  font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+color:#65758B;
+line-height: 20px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+
+}
+
 .wrapper-numbers {
   display: flex;
   justify-content: center;
@@ -69,7 +80,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 90px;
 
   /* height: 300px; */
 }
@@ -169,5 +180,6 @@
   .Choose-wrapper h2 {
     font-size: 23px !important;
     font-weight: 800 !important;
+    line-height: 30px;
   }
 }

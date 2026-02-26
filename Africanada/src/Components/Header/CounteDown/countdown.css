@@ -1,5 +1,5 @@
 .countdown {
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
   gap: 20px;
 }
@@ -37,16 +37,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+  
+   width:100%;
+        padding:6px;
+      
+  
+
+        
+  
+  
   .timer-Box {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    font-size: 30px;
-    height: 0;
-    width: 20px;
-    border-radius: 1px;
+  
+      
+  
+   
+   
+  
   }
+}
 }
 
 @media (max-width: 1020px) {

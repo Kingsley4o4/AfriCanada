@@ -1,9 +1,11 @@
 .Expo {
+  margin-top:50px;
+  padding: 15px;
   background-color: #f3f5f780;
 }
 
 .Expo-Container {
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -32,12 +34,35 @@
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 40px;
+  margin-top: 20px;
+  
 }
 
 /* ===========================
    RED & BLACK CONTAINERS
 =========================== */
+.red-box > h5{
+  font-family: Inter;
+font-weight: 700;
+font-style: Bold;
+font-size: 32px;
 
+line-height: 125%;
+letter-spacing: -0.6px;
+vertical-align: middle;
+
+}
+.redBoxIconTest{
+  font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+
+line-height: 20px;
+letter-spacing: 0%;
+vertical-align: middle;
+
+}
 .red-container,
 .black-container {
   display: flex;
@@ -45,7 +70,7 @@
   align-items: center;
   flex: 1;
   min-width: 300px;
-  max-width: 520px;
+  max-width: 754px;
   width: 100%;
 }
 
@@ -79,22 +104,34 @@
   padding: 16px 20px;
   color: gray;
   box-sizing: border-box;
-  box-shadow:
+  /* box-shadow:
     rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
-.white-box h5 {
-  font-size: 14px;
+.white-box h5  {
+  font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+flex-wrap: nowrap;
+word-break: break-word;
+
+
+letter-spacing: 0%;
+vertical-align: middle;
+
+  /* font-size: 14px;
   font-weight: 400;
   display: flex;
   align-items: center;
   gap: 10px;
   flex-wrap: nowrap;
   word-break: break-word;
-  line-height: 1.5;
+  line-height: 1.5; */
+
 }
 
 .white-box h5 .icon-span {
@@ -104,6 +141,18 @@
 /* ===========================
    BLACK BOX
 =========================== */
+
+.blackBoxHeadText{
+  font-family: Inter;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+
+line-height: 28px;
+letter-spacing: -0.45px;
+vertical-align: middle;
+
+}
 
 .black-box {
   background-color: #0f1729;
@@ -116,30 +165,40 @@
 }
 
 .black-box span {
-  font-size: 15px;
-  word-break: break-word;
+  font-size: 14px;
 }
 
 /* ===========================
    WHITE BOX 2
 =========================== */
+.white-box2 span{
+  font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+ word-break: break-word;
+line-height: 20px;
+letter-spacing: 0%;
+vertical-align: middle;
 
+}
 .white-box2 {
   margin-top: 24px;
   border-radius: 10px;
   padding: 16px 20px;
   width: 100%;
   box-sizing: border-box;
-  box-shadow:
+  /* box-shadow:
     rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.white-box2 span {
+/* .white-box2 span {
   font-size: 14px;
   font-weight: 400;
-  word-break: break-word;
-}
+ 
+} */
 
 /* ===========================
    SHARED
@@ -189,8 +248,7 @@
   background-color: #c70007;
   color: white;
   cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
+ 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,8 +266,7 @@
   outline: none;
   border: 1.5px solid #333;
   cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
+
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -229,7 +286,7 @@
   .Main-container {
     flex-direction: column;
     align-items: center;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     gap: 20px;
   }
 
@@ -269,6 +326,8 @@
   }
 
   .white-box h5 {
+    display: flex;
+line-height: 20px;
     font-size: 13px;
   }
 
@@ -296,4 +355,19 @@
   .Expo-Container {
     padding-inline: 10px;
   }
+}
+
+.card{
+  width:1000px;
+  height:1000px;
+  background-color:red;
+}
+
+.card div{
+
+   background-color:red;
+   width:500px;
+   height:500px;
+   background-color:green;
+
 }

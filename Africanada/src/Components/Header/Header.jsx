@@ -3,6 +3,7 @@ import "./header.css";
 import Img from "../Header/Img/Header(1).png";
 import { Calendar, MapPin, ArrowUpRight } from "lucide-react";
 import Countdown from "./CounteDown/CountDown";
+import CountUp from "react-countup"
 
 function Header() {
   return (
@@ -52,7 +53,10 @@ function Header() {
         </div>
         <div className="TotalUser-Number">
           <div className="totalUserTest">
-            <h1>500+</h1>
+             
+           
+            <h1>   <CountUp end={500} enableScrollSpy scrollSpyOnce />+
+             </h1>
             <span
               style={{
                 color: "gray",
@@ -65,7 +69,8 @@ function Header() {
             </span>
           </div>
           <div className="totalUserTest">
-            <h1>40+</h1>
+            <h1>
+              <CountUp end={40} enableScrollSpy scrollSpyOnce />+ </h1>
             <span
               style={{
                 color: "gray",
@@ -78,7 +83,8 @@ function Header() {
             </span>
           </div>
           <div className="totalUserTest">
-            <h1>10,000+</h1>
+            <h1>
+             <CountUp end={10000} enableScrollSpy scrollSpyOnce />+</h1>
             <span
               style={{
                 color: "gray",
@@ -92,7 +98,8 @@ function Header() {
           </div>
 
           <div className="totalUserTest">
-            <h1>$100M+</h1>
+            <h1>
+                  $<CountUp end={100} enableScrollSpy scrollSpyOnce />M+</h1>
             <span
               style={{
                 color: "gray",

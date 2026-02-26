@@ -12,18 +12,27 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 
+
+
+
 function Expo() {
+ 
+
   return (
     <div className="Expo">
+    
+    
+      
+
       <div className="Expo-Container">
-        <h5 style={{ color: "#E2473C",fontSize:"16px"  }}>THE INAUGURAL EDITION </h5>
-        <h2 style={{ marginTop: "-20px", fontSize: "3rem", textAlign:"center" }}>
+        <h5 className="RedColorHeadText" >THE INAUGURAL EDITION </h5>
+        <h2 className="HeaderText" style={{ marginTop: "-20px", textAlign:"center" }}>
           AfriCanada Expo 2026
         </h2>
-        <i className="italic" style={{ color: "gray", fontWeight: "600", marginTop: "-19px",textAlign:"center" }}>
+        <span className="italic italicText" style={{  marginTop: "-19px",textAlign:"center" }}>
           "We aren't just hosting a trade show; we are building a trade
           corridor."
-        </i>
+        </span>
       </div>
       <div className="Main-container">
         <div className="red-container">
@@ -34,18 +43,18 @@ function Expo() {
               Prosperity"
             </h3>
             <Calendar size={12} color="white" />
-            <span style={{ paddingInlineStart: "6px", paddingRight: "20px" }}>
+            <span className="redBoxIconTest" style={{ paddingInlineStart: "6px", paddingRight: "20px" }}>
               {" "}
               June 10-12, 2026
             </span>
             | <MapPin size={12} color="white" style={{ paddingLeft: "20px" }} />
-            <span style={{ paddingInlineStart: "6px" }}>
+            <span  className="redBoxIconTest" style={{ paddingInlineStart: "6px" }}>
               Edomonton, Alberta, Canada
             </span>
           </div>
 
           <div className="white-box">
-            <h4>What to Expect</h4>
+            <h4 className="whiteBoxText">What to Expect</h4>
             <h5>
               {" "}
               <span
@@ -95,15 +104,16 @@ function Expo() {
 
         <div className="black-container">
           <div className="black-box">
-            <div
+            <div 
               style={{
                 display: "flex",
                 flexDirection: "column",
                 gap: "7px",
                 justifyContent: "center",
+                alignItem:"center"
               }}
             >
-              <span style={{fontSize:"20px", fontWeight:"400" , paddingTop:"30px" } }>Expected Outcomes</span>
+              <span className="blackBoxHeadText" style={{ paddingTop:"13px" } }>Expected Outcomes</span>
               <span>
                 {" "}
                 <CircleCheckBig
@@ -156,7 +166,7 @@ function Expo() {
                   fontSize: "14px",
                 }}
               >
-                <h3>Key Highlights</h3>
+                <h3 className="whiteBoxText">Key Highlights</h3>
 
                 <span>
                   {" "}
@@ -210,12 +220,12 @@ function Expo() {
             <div className="BtnContainer">
               <button
                 className="
-                ExhibitorBtn
+                ExhibitorBtn buttonText
             "
               >
                 Register as Exhibitor <ArrowUpRight size={16} color="white" />
               </button>
-              <button className="sponserBtn ">
+              <button className="sponserBtn  buttonText">
                 Become a Sponsor <ArrowUpRight size={16} />
               </button>
             </div>
@@ -228,8 +238,8 @@ function Expo() {
           </div>
         </div>
       </div>
-    
-    </div>
+   
+    </div> 
   );
 }
 

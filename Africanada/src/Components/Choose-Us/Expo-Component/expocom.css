@@ -3,9 +3,10 @@
 =========================== */
 
 .ExpoCom {
-  margin-top: 50px;
+  margin-top: 100px;
   background-color: #f3f5f74d;
 }
+
 
 .ExpoCom-Wrapper {
   padding-top: 40px;
@@ -18,9 +19,9 @@
 }
 
 .expoComHeading {
-  font-size: 38px;
+  
   margin-top: -20px;
-  text-align: center;
+
 }
 
 /* ===========================
@@ -59,6 +60,13 @@
   padding: 10px;
   border-radius: 15px;
   white-space: nowrap;
+}
+
+.spanbtn:hover{
+
+  color:rgb(240, 168, 105);
+ 
+
 }
 
 .spanbtn-active {
@@ -105,9 +113,7 @@
   margin-top: 20px;
   border-radius: 10px;
   gap: 50px;
-  box-shadow:
-    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .firstTabDisplayCard {
@@ -155,9 +161,12 @@
 
 .CircleCheckContaner {
   display: flex;
-  margin-top: 40px;
+  
+ 
+  
+  margin-top: 25px;
   gap: 15px;
-  font-size: 17px;
+  /* font-size: 17px; */
   color: #0f1729;
   flex-direction: column;
 }
@@ -167,6 +176,7 @@
 =========================== */
 
 .Attend-Program {
+  margin-top: 40px;
   width: 100%;
   display: block;
   clear: both;
@@ -176,7 +186,7 @@
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-top: 3rem;
+  margin-top: rem;
   margin-bottom: 3rem;
   padding-inline: 30px;
   /* flex-wrap: wrap; */
@@ -194,7 +204,7 @@
   color: white;
   width: 100%;
   background-color: #b7050b;
-  min-height: 160px;
+  min-height: 140px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -203,7 +213,7 @@
   background-color: #0f1729;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  min-height: 160px;
+  min-height: 140px;
   width: 100%;
   color: white;
 }
@@ -230,12 +240,11 @@
 .whiteBox {
   padding: 16px 20px;
   width: 100%;
+  height:780px;
   box-sizing: border-box;
-  box-shadow:
-    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .CircleCheckContanerWhite1,
@@ -314,6 +323,18 @@
     gap: 24px;
     padding-inline: 20px;
     flex-wrap: wrap;
+  }
+
+  .whiteBox{
+     padding: 16px 20px;
+  width: 100%;
+ height:auto;
+  box-sizing: border-box;
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   }
 }
 

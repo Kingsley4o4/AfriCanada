@@ -3,18 +3,25 @@ import "./navbar.css";
 import logo from "../Navbar/Images/logo.png";
 import { Globe, Menu, X } from "lucide-react";
 
+
+
+
 const navLinks = ["Home", "About", "Exhibit", "Visit", "Sponsorship", "News"];
 
 function NavBar() {
+   
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="NavBar">
+     
       <div className="Navbar-Wrapper">
+        
         {/* LOGO */}
         <div className="Logo-Container">
           <img src={logo} alt="Logo" />
         </div>
+        
 
         {/* DESKTOP LINKS */}
         <ul className="Nav-Links">
@@ -37,14 +44,18 @@ function NavBar() {
 
       {/* MOBILE MENU */}
       <div className={`Mobile-Menu ${menuOpen ? "open" : ""}`}>
+        
         <ul>
+          
           {navLinks.map((link, index) => (
             <li key={index} onClick={() => setMenuOpen(false)}>
               {link}
             </li>
           ))}
         </ul>
+        
         <div className="Mobile-Bottom">
+          
           <Globe size={20} />
           <button className="contactBtn">Contact Us</button>
         </div>

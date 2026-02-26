@@ -8,9 +8,23 @@ import PartnerShip from "./Components/PartnerShip/PartnerShip.jsx";
 import OurPartner from "./Components/OurPartner/OurPartner.jsx";
 import LatestUpdate from "./Components/LatestUpdate/LatestUpdate.jsx";
 import Connect from "./Components/StayConnected/Connect.jsx";
+import { motion, useScroll } from "framer-motion"
+
 function App() {
+  const { scrollYProgress } = useScroll()
   return (
     <div className="App">
+ <motion.div  className="scroll"
+              style={{
+                scaleX: scrollYProgress,
+              
+                
+                transformOrigin: "left",
+                zIndex: 9999,
+              }}>
+          </motion.div>
+         
+           
       <NavBar />
       <Header />
       <Expo />

@@ -174,19 +174,19 @@ const ExpoCom = () => {
     <div className="ExpoCom">
       {/* HEADER */}
       <div className="ExpoCom-Wrapper">
-        <h4 style={{ color: "#c70007", fontSize: "14px" }}>EXPO COMPONENT</h4>
+        <h4 className="RedColorHeadText">EXPO COMPONENT</h4>
         <h2
-          className="expoComHeading"
-          style={{ marginTop: "-20px", textAlign: "center" }}
+          className="expoComHeading HeaderText"
+         
         >
           A Complete Business Ecosystem
         </h2>
-        <span
+        <span className="CardText"
           style={{
-            color: "gray",
+            
             marginTop: "-20px",
             textAlign: "center",
-            fontWeight: "600",
+            
           }}
         >
           Everything you need for successful deal-making under one roof
@@ -201,7 +201,7 @@ const ExpoCom = () => {
               <span
                 key={index}
                 onClick={() => setActiveDisplay(index)}
-                className={`spanbtn ${activeDisplay === index ? "spanbtn-active" : ""}`}
+                className={`spanbtn CardText ${activeDisplay === index ? "spanbtn-active" : ""}`}
               >
                 {tab.icon} {tab.label}
               </span>
@@ -215,15 +215,15 @@ const ExpoCom = () => {
         <div className="tabDisplay-Wrapper">
           <div className="firstTabDisplayCard">
             <div className="headIcon">
-              <h1 style={{ display: "flex", alignItems: "center" }}>
+              <h1  className="TabCardhead"  style={{ display: "flex", alignItems: "center"  }}>
                 {activeCard.icon} {activeCard.title}
               </h1>
             </div>
-            <span style={{ color: "gray", fontSize: "17px" }}>
+            <span className="CardText">
               {activeCard.description}
             </span>
             <div className="btnContainerExpo">
-              <button>
+              <button className="buttonText">
                 {activeCard.buttonLabel} <ArrowRight size={17} />
               </button>
             </div>
@@ -232,7 +232,7 @@ const ExpoCom = () => {
           <div className="secondTabDisplayCard">
             <div className="CircleCheckContaner">
               {activeCard.items.map((item, index) => (
-                <span key={index}>
+                <span className="CardTextAlign" key={index}>
                   <CircleCheckBig color="green" size={18} /> {item}
                 </span>
               ))}
@@ -244,12 +244,12 @@ const ExpoCom = () => {
       {/* WHO SHOULD ATTEND */}
       <div className="Attend-Program">
         <div className="ExpoCom-Wrapper">
-          <h4 style={{ color: "#c70007", fontSize: "14px" }}>
+          <h4 className="RedColorHeadText">
             WHO SHOULD ATTEND
           </h4>
           <h2
-            className="expoComHeading"
-            style={{ marginTop: "-20px", textAlign: "center" }}
+            className="HeaderText"
+            style={{ marginTop: "-19px", }}
           >
             A Complete Business Ecosystem
           </h2>

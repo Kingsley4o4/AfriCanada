@@ -31,7 +31,7 @@
   align-items: center;
   text-align: center;
 
-  transform: translateY(-19%);
+  transform: translateY(-17%);
 
   /* inset: 0;
   display: flex;
@@ -85,7 +85,7 @@
   border: none;
   width: 231px;
   height: 48px;
-  border-radius: 12px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
   transform: translateY(0);
@@ -154,6 +154,12 @@
 .textInto{
   font-size: 20px;
 }
+
+
+
+ 
+  
+
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -215,11 +221,16 @@
   .introText {
     font-size: 40px;
 
-    margin-top: 10rem;
+    margin-top: 8rem;
+  }
+
+  .intro-content{
+    display: none;
   }
 
   .Header-ImageWrapper {
-    height: 55rem;
+    /* height: 55rem; */
+    height:64rem;
   }
 
   .stMArginTop {
@@ -236,7 +247,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
    
   }
 
@@ -261,7 +272,7 @@
   }
 
   .Header-ImageWrapper {
-    height: 57rem;
+    height: 59rem;
   }
 }
 @media (min-width: 641px) and (max-width: 1024px) {
@@ -273,8 +284,13 @@
     /* height: 30rem; */
   }
   .introText {
-    margin-top:13rem;
+    margin-top:10rem;
     font-size: 60px;
+  }
+
+  .TotalUser-Number{
+    display:grid;
+    grid-template-columns: repeat(2 , 1fr);
   }
 }
 
