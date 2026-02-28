@@ -36,6 +36,7 @@
 }
 
 @media (max-width: 640px) {
+  
   .countdown {
     display: flex;
     align-items: center;
@@ -49,9 +50,12 @@
         
   
   
-  .timer-Box {
+ 
+}
+
+ .timer-Box {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   
       
@@ -60,7 +64,6 @@
    
   
   }
-}
 }
 
 @media (max-width: 1020px) {
