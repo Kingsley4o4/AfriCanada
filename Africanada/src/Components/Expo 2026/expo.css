@@ -1,7 +1,8 @@
 .Expo {
-  margin-top:50px;
+  margin-top: -2px;
   padding: 15px;
   background-color: #f3f5f780;
+  z-index: 100;
 }
 
 .Expo-Container {
@@ -35,33 +36,30 @@
   box-sizing: border-box;
   margin-bottom: 40px;
   margin-top: 20px;
-  
 }
 
 /* ===========================
    RED & BLACK CONTAINERS
 =========================== */
-.red-box > h5{
+.red-box > h5 {
   font-family: Inter;
-font-weight: 700;
-font-style: Bold;
-font-size: 32px;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 32px;
 
-line-height: 125%;
-letter-spacing: -0.6px;
-vertical-align: middle;
-
+  line-height: 125%;
+  letter-spacing: -0.6px;
+  vertical-align: middle;
 }
-.redBoxIconTest{
+.redBoxIconTest {
   font-family: Inter;
-font-weight: 400;
-font-style: Regular;
-font-size: 14px;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
 
-line-height: 20px;
-letter-spacing: 0%;
-vertical-align: middle;
-
+  line-height: 20px;
+  letter-spacing: 0%;
+  vertical-align: middle;
 }
 .red-container,
 .black-container {
@@ -106,22 +104,24 @@ vertical-align: middle;
   box-sizing: border-box;
   /* box-shadow:
     rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
-.white-box h5  {
+.white-box h5 {
   font-family: Inter;
-font-weight: 400;
-font-style: Regular;
-font-size: 14px;
-flex-wrap: nowrap;
-word-break: break-word;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  flex-wrap: nowrap;
+  word-break: break-word;
 
-
-letter-spacing: 0%;
-vertical-align: middle;
+  letter-spacing: 0%;
+  vertical-align: middle;
 
   /* font-size: 14px;
   font-weight: 400;
@@ -131,7 +131,6 @@ vertical-align: middle;
   flex-wrap: nowrap;
   word-break: break-word;
   line-height: 1.5; */
-
 }
 
 .white-box h5 .icon-span {
@@ -142,16 +141,15 @@ vertical-align: middle;
    BLACK BOX
 =========================== */
 
-.blackBoxHeadText{
+.blackBoxHeadText {
   font-family: Inter;
-font-weight: 700;
-font-style: Bold;
-font-size: 18px;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
 
-line-height: 28px;
-letter-spacing: -0.45px;
-vertical-align: middle;
-
+  line-height: 28px;
+  letter-spacing: -0.45px;
+  vertical-align: middle;
 }
 
 .black-box {
@@ -171,16 +169,15 @@ vertical-align: middle;
 /* ===========================
    WHITE BOX 2
 =========================== */
-.white-box2 span{
+.white-box2 span {
   font-family: Inter;
-font-weight: 400;
-font-style: Regular;
-font-size: 14px;
- word-break: break-word;
-line-height: 20px;
-letter-spacing: 0%;
-vertical-align: middle;
-
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  word-break: break-word;
+  line-height: 20px;
+  letter-spacing: 0%;
+  vertical-align: middle;
 }
 .white-box2 {
   margin-top: 24px;
@@ -191,7 +188,9 @@ vertical-align: middle;
   /* box-shadow:
     rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 /* .white-box2 span {
@@ -248,7 +247,7 @@ vertical-align: middle;
   background-color: #c70007;
   color: white;
   cursor: pointer;
- 
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -264,7 +263,9 @@ vertical-align: middle;
   height: 40px;
   border-radius: 10px;
   outline: none;
-  border: 1.5px solid #333;
+  border: none;
+  background-color: #f3f3f5;
+
   cursor: pointer;
 
   background-color: transparent;
@@ -327,8 +328,22 @@ vertical-align: middle;
 
   .white-box h5 {
     display: flex;
-line-height: 20px;
+    line-height: 20px;
     font-size: 13px;
+  }
+
+  .black-box span {
+    display: flex;
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    word-break: break-word;
+  }
+
+  .black-box span svg {
+    flex-shrink: 0;
+    margin-top: 2px;
   }
 
   .BtnContainer {
@@ -357,17 +372,15 @@ line-height: 20px;
   }
 }
 
-.card{
-  width:1000px;
-  height:1000px;
-  background-color:red;
+.card {
+  width: 1000px;
+  height: 1000px;
+  background-color: red;
 }
 
-.card div{
-
-   background-color:red;
-   width:500px;
-   height:500px;
-   background-color:green;
-
+.card div {
+  background-color: red;
+  width: 500px;
+  height: 500px;
+  background-color: green;
 }

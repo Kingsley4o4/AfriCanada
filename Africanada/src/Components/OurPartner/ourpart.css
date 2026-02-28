@@ -16,24 +16,37 @@
   gap: 20px;
 }
 
-.SelectionOne {
+.SelectionText {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+ 
+}
+.SelectionText h5 {
+ font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+/* display: */
+line-height: 20px;
+letter-spacing: 0%;
+
+
 }
 
-.SelectionOne h5 {
-  padding: 10px;
+.SelectionText h5 {
+  
+  padding: 15px;
   border-radius: 10px;
-  border: 1px solid #65758b;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   color: #65758b;
   transition: all 0.3s ease;
-  cursor: pointer;
+
   background: white;
 }
 
-.SelectionOne h5:hover {
+.SelectionText h5:hover {
   box-shadow: 0 5px 15px rgba(101, 85, 139, 0.3);
   border-color: #e2473c;
   color: #e2473c;
@@ -46,52 +59,9 @@
   justify-content: space-around;
 }
 
-.SelectionTwo {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
 
-.SelectionTwo h5 {
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #65758b;
-  color: #65758b;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  background: white;
-}
 
-.SelectionTwo h5:hover {
-  box-shadow: 0 8px 20px rgba(101, 85, 139, 0.25);
-  border-color: #e2473c;
-  color: #e2473c;
-  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-}
 
-.SelectionThrid h5 {
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #65758b;
-  color: #65758b;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  background: white;
-}
 
-.SelectionThrid h5:hover {
-  box-shadow: 0 6px 18px rgba(101, 85, 139, 0.2);
-  border-color: #e2473c;
-  color: #e2473c;
-  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-}
-
-.SelectionThrid {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
 
 /* Partner CTA Section */

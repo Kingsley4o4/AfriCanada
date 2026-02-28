@@ -80,7 +80,7 @@
   width: 32px;
   height: 32px;
   background-color: #f59e0b;
-  color: white;
+  color: black;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -160,9 +160,14 @@
 }
 
 .fullBox span {
-  font-size: 17px;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Italic;
+  font-size: 18px;
+
+  letter-spacing: 0%;
   text-align: center;
-  color: #d1d5db;
+  vertical-align: middle;
 }
 
 .outtroCard span {
@@ -179,20 +184,69 @@
   text-align: center;
 }
 
-.lastContainer {
+/* .lastContainer {
   text-align: center;
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
 }
+
 .lastContainer span {
-  background-color: #1f2937;
+  background-color: #ffffff1a;
+  border-radius: 30px;
+  color: #d1d5db;
+  padding: 10px 20px;
+  font-size: 14px;
+} */
+
+.lastContainer {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+  gap: 0; 
+}
+
+.lastContainer span {
+  background-color: #ffffff1a;
+ 
   border-radius: 30px;
   color: #d1d5db;
   padding: 10px 10px;
+  font-size: 14px;
+  text-align: center;
+  
+
+  margin-left: -15px; 
+  
+
+  backdrop-filter: blur(4px);
+  position: relative;
 }
+
+.lastContainer span:first-child {
+  margin-left: 0;
+}
+
+
+.lastContainer span:last-child {
+  margin-top: 10px;
+}
+
+/* .allTextFont{
+  font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+
+line-height: 20px;
+letter-spacing: 0%;
+vertical-align: middle;
+
+} */
 
 @media (max-width: 1024px) {
   .partnerShipContentContainer {

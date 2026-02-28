@@ -16,9 +16,16 @@
   border-radius: 5px;
   cursor: pointer;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .white-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
   color: #0f1729;
   border: none;
@@ -60,7 +67,8 @@
 }
 
 .stayConnectedContainer {
-  background: linear-gradient(#e2473c, #0f1729);
+  background: linear-gradient(135deg, #E2473C 0%, #0F1729 100%);
+
   margin-top: -22px;
   padding: 60px 20px 90px;
 }
@@ -72,8 +80,18 @@
   flex-direction: column;
 }
 
-.stayConnectedWrapper {
-  color: #ffffffcc;
+.stayConnectedWrapper span {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+
+  /* color: #ffffffcc; */
 }
 
 .stayConnectedWrapper h2 {
@@ -87,6 +105,7 @@
   text-align: center;
   max-width: 820px;
   font-size: 13px;
+  color:white;
 }
 
 .stayConnectedCard {
@@ -258,9 +277,16 @@
 }
 
 .footerDivider {
+  /* padding:40px */
   height: 1px;
   background: rgba(255, 255, 255, 0.08);
   margin: 26px 0;
+}
+.footerDividerHalf{
+   height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 28px 0 0 40px;
+
 }
 
 .footerContacts {
@@ -268,6 +294,8 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   align-items: center;
+
+  padding: 30px 0px 0px 30px;
 }
 
 .footerContact {

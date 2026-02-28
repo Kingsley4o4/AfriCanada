@@ -30,10 +30,10 @@ function Header() {
               
               Expo 2026
             </h1>
-            <h2 className="stMArginTop">
-              Premier Global Platform for Shared Prosperity{" "}
+            <h2  className="stMArginTop">
+              Premier Global Platform for Shared Prosperity
             </h2>
-            <span className="textInto" style={{ marginTop: "-10px" }}>
+            <span className="textInto" style={{ marginTop: "-5px" }}>
               Connecting African Excellence with Global Opportunities Through
               World-Class Exhibitions
             </span>

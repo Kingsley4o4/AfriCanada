@@ -114,9 +114,23 @@ font-size: 14px;
 line-height: 20px;
 letter-spacing: 0%;
 vertical-align: middle;
-color:#65758B;
+
+
 
   
+}
+.AttendTest{
+   font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+ word-break: break-word;
+line-height: 20px;
+letter-spacing: 0%;
+vertical-align: middle;
+  display: flex;
+gap:5px;
+
 }
 
 .allRedReadingNum{

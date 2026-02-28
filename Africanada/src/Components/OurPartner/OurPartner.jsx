@@ -13,7 +13,7 @@ const OurPartner = () => {
         <h4 style={{ color: "#65758B" }}> Government Partner</h4>
       </div>
       <div className="SelectionOneContainer">
-        <div className="SelectionOne">
+        <div className="SelectionText">
           <h5>Government of Canada</h5>
           <h5>Province of Alberta</h5>
           <h5>Edmonton</h5>
@@ -25,7 +25,7 @@ const OurPartner = () => {
         International Organizations{" "}
       </h4>
       <div className="SelectionTwoContainer">
-        <div className="SelectionTwo">
+        <div className="SelectionText">
           <h5>African Union</h5>
           <h5>AfCFTA Secretariat</h5>
           <h5>African Development Bank</h5>
@@ -37,7 +37,7 @@ const OurPartner = () => {
         Trade & Business
       </h4>
       <div className="SelectionThirdContainer">
-        <div className="SelectionThrid">
+        <div className="SelectionText">
           <h5>Chambers of Commerce</h5>
           <h5>Export Promotion Agencies</h5>
           <h5>Trade Associations</h5>
@@ -45,14 +45,14 @@ const OurPartner = () => {
         </div>
       </div>
       <h4 style={{ color: "#65758B", textAlign: "center" }}>
-        Trade & Business
+        Media Partners
       </h4>
       <div className="SelectionThirdContainer">
-        <div className="SelectionThrid">
+        <div className="SelectionText">
           <h5>CNN International</h5>
           <h5>CNBC Africa</h5>
           <h5>African Business Magazine</h5>
-          <h5>Industry</h5>
+        
         </div>
       </div>
       <div

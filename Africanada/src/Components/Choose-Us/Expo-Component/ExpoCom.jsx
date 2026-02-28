@@ -248,10 +248,10 @@ const ExpoCom = () => {
             WHO SHOULD ATTEND
           </h4>
           <h2
-            className="HeaderText"
+            className="HeaderText expoComHeading"
             style={{ marginTop: "-19px", }}
           >
-            A Complete Business Ecosystem
+            Join Thousands of Trade Professionals
           </h2>
         </div>
 
@@ -269,18 +269,18 @@ const ExpoCom = () => {
               </div>
             </div>
             <div className="whiteBox">
-              <h3>Who Should Exhibit:</h3>
+              <h3 className="whiteBoxText">Who Should Exhibit:</h3>
               <div className="CircleCheckContanerWhite1">
                 {exhibitorWho.map((item, i) => (
-                  <span key={i} className="circleicon">
+                  <span key={i} className=" AttendTest">
                     <CircleCheckBig color="green" size={18} /> {item}
                   </span>
                 ))}
-                <span style={{ fontSize: "20px", fontWeight: "700" }}>
+                <span className="whiteBoxText">
                   Exhibitor Benefits:
                 </span>
                 {exhibitorBenefits.map((item, i) => (
-                  <span key={i} className="circleicon">
+                  <span key={i} className="AttendTest">
                     <CircleCheckBig color="#E2473C" size={18} /> {item}
                   </span>
                 ))}
@@ -307,18 +307,18 @@ const ExpoCom = () => {
               </div>
             </div>
             <div className="whiteBox">
-              <h3>Who Should Visit:</h3>
+              <h3 className="whiteBoxText">Who Should Visit:</h3>
               <div className="CircleCheckContanerWhite">
                 {visitorWho.map((item, i) => (
-                  <span key={i} className="circleicon">
+                  <span key={i} className="AttendTest">
                     <CircleCheckBig color="green" size={18} /> {item}
                   </span>
                 ))}
-                <span style={{ fontSize: "20px", fontWeight: "700" }}>
+                <span className="whiteBoxText">
                   Visitor Benefits:
                 </span>
                 {visitorBenefits.map((item, i) => (
-                  <span key={i} className="circleicon">
+                  <span key={i} className="AttendTest">
                     <CircleCheckBig color="#FBBD23" size={18} /> {item}
                   </span>
                 ))}

@@ -1,7 +1,9 @@
 /* ===========================
    BASE STYLES
 =========================== */
-
+.attendHeaderSubtitle{
+  padding-top:20px;
+}
 .ExpoCom {
   margin-top: 100px;
   background-color: #f3f5f74d;
@@ -346,9 +348,12 @@
   .expoComHeading {
     font-size: 28px;
   }
-
+.ExpoCom-Wrapper h52{
+  font-size:28px;
+}
   .ExpoCom-Wrapper {
     padding-inline: 16px;
+   
   }
 
   .tabDisplay {
@@ -398,6 +403,7 @@
 
   .attendHeaderSubtitle {
     font-size: 14px;
+   
   }
 
   .content-container {

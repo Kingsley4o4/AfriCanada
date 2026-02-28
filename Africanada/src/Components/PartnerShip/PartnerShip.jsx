@@ -37,7 +37,7 @@ const PartnerShip = () => {
               <span className="numberBadge">2</span>
               <div>
                 <span className="numberedTitle">Drive Economic Growth</span>
-                <p className="numberedDesc">
+                <p className="numberedDesc ">
                   Create tangible opportunities for Indigenous and African
                   businesses.
                 </p>
@@ -102,9 +102,9 @@ const PartnerShip = () => {
         <div className="fullBox">
           <span>
             "Indigenous Peoples in Canada and African communities both carry
-            histories marked by colonialism and land dispossession. At <br />
+            histories marked by colonialism and land dispossession.  At  <br />
             the same time, both hold deep knowledge of intergenerational
-            resilience and stewardship. We gather to weave these futures <br />{" "}
+            resilience and stewardship. We gather to weave these futures {" "}
             together."
           </span>
         </div>
@@ -121,11 +121,11 @@ const PartnerShip = () => {
         </div>
       </div>
       <div className="lastContainer">
-        <span>Economic Development Corporations looking for global trade bridges</span>
-        <span>Indigenous-Owned Businesses and cooperatives</span>
-        <span>Chambers of Commerce and tourism groups</span> <br />
-        <span style={{textAlign:"center", }}>Cultural Practitioners and Knowledge Keepers</span>
-      </div>
+  <span>Economic Development Corporations looking for global trade bridges</span>
+  <span>Indigenous-Owned Businesses and cooperatives</span> 
+  <span>Chambers of Commerce and tourism groups</span>
+  <span>Cultural Practitioners and Knowledge Keepers</span>
+</div>
     </div>
   );
 };

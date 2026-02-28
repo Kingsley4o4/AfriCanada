@@ -132,7 +132,7 @@ const Connect = () => {
 
           <div className="footerContacts">
             <div className="footerContact">
-              <Mail size={14} />
+              <Mail color="#E2473C" size={14} />
               <div>
                 <div className="footerContactLabel">General Inquiries</div>
                 <div className="footerContactValue">
@@ -141,14 +141,14 @@ const Connect = () => {
               </div>
             </div>
             <div className="footerContact">
-              <Phone size={14} />
+              <Phone color="#E2473C" size={14} />
               <div>
                 <div className="footerContactLabel">Phone</div>
                 <div className="footerContactValue">+1 (587) 501-3257</div>
               </div>
             </div>
             <div className="footerContact">
-              <MapPin size={14} />
+              <MapPin color="#E2473C" size={14} />
               <div>
                 <div className="footerContactLabel">Location</div>
                 <div className="footerContactValue">
@@ -178,12 +178,13 @@ const Connect = () => {
 
           <div className="footerBottom">
             <div className="footerBottomTop">
-              <div>© 2025 Made in Africa Expo. All rights reserved.</div>
+              <div style={{paddingLeft:"35px"}}> © 2025 Made in Africa Expo. All rights reserved.</div>
               <div className="footerBottomLinks">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms &amp; Conditions</a>
               </div>
             </div>
+            <div className="footerDividerHalf"></div>
 
             <div className="footerAcknowledge">
               We acknowledge that we are on Treaty 6 territory, the traditional

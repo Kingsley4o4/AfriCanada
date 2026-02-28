@@ -168,52 +168,62 @@ function Expo() {
               >
                 <h3 className="whiteBoxText">Key Highlights</h3>
 
-                <span>
+                <span style={{ display: "flex", alignItems: "flex-start", gap: "6px" }}>
                   {" "}
                   <CircleCheckBig
-                    style={{ paddingRight: "6px" }}
+                    style={{ flexShrink: "0", paddingTop: "2px" }}
                     color="green"
                     size={14}
                   />{" "}
-                  Free registration for qualified Canadian/African trade
-                  visitors
+                  <div>
+                    Free registration for qualified Canadian/African trade
+                    visitors
+                  </div>
                 </span>
-                <span>
+                <span style={{ display: "flex", alignItems: "flex-start", gap: "6px" }}>
                   {" "}
                   <CircleCheckBig
-                    style={{ paddingRight: "6px" }}
+                    style={{ flexShrink: "0", paddingTop: "2px" }}
                     color="green"
                     size={14}
                   />{" "}
-                  Visa support for international attendees
+                  <div>
+                    Visa support for international attendees
+                  </div>
                 </span>
-                <span>
+              <span style={{ display: "flex", alignItems: "flex-start", gap: "6px" }}>
                   {" "}
                   <CircleCheckBig
-                    style={{ paddingRight: "6px" }}
+                    style={{ flexShrink: "0", paddingTop: "2px" }}
                     color="green"
                     size={14}
                   />{" "}
-                  Government delegations from 15+ countries
+                  <div>
+                    Government delegations from 15+ countries
+                  </div>
                 </span>
-                <span>
+                <span style={{ display: "flex", alignItems: "flex-start", gap: "6px" }}>
                   {" "}
                   <CircleCheckBig
-                    style={{ paddingRight: "6px" }}
+                    style={{ flexShrink: "0", paddingTop: "2px" }}
                     color="green"
                     size={14}
                   />{" "}
-                  Opening night gala with 1,000+ attendees
+                  <div>
+                    Opening night gala with 1,000+ attendees
+                  </div>
                 </span>
 
-                <span>
+                <span style={{ display: "flex", alignItems: "flex-start", gap: "6px" }}>
                   {" "}
                   <CircleCheckBig
-                    style={{ paddingRight: "6px" }}
+                    style={{ flexShrink: "0", paddingTop: "2px" }}
                     color="green"
                     size={14}
                   />{" "}
-                  Awards ceremony recognizing excellence
+                  <div>
+                    Awards ceremony recognizing excellence
+                  </div>
                 </span>
               </div>
             </div>
@@ -225,7 +235,7 @@ function Expo() {
               >
                 Register as Exhibitor <ArrowUpRight size={16} color="white" />
               </button>
-              <button className="sponserBtn  buttonText">
+              <button style={{backgroundColor:"#F3F3F5"}} className="sponserBtn  buttonText">
                 Become a Sponsor <ArrowUpRight size={16} />
               </button>
             </div>
