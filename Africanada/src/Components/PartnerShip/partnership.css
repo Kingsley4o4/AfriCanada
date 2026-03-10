@@ -207,7 +207,7 @@
   flex-wrap: wrap;
   justify-content: center;
  
-  gap: 0; 
+  gap: 10px; 
 }
 
 .lastContainer span {
@@ -232,9 +232,6 @@
 }
 
 
-.lastContainer span:last-child {
-  margin-top: 10px;
-}
 
 /* .allTextFont{
   font-family: Inter;

@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css";
-import Img from "../Header/Img/Header(1).png";
+import Img from "../Header/Img/Header(1).avif";
 import { Calendar, MapPin, ArrowUpRight } from "lucide-react";
 import Countdown from "./CounteDown/CountDown";
 import CountUp from "react-countup"

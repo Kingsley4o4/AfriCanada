@@ -68,7 +68,9 @@
   align-items: center;
   flex: 1;
   min-width: 300px;
-  max-width: 754px;
+  max-width: 600px;
+  /* max-width: 754px; */
+  
   width: 100%;
 }
 
